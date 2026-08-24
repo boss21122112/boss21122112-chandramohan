@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;505;600;700;800;900&family=Inter:wght@300;450;500;600;704&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Custom visual color definitions */
+  --color-slate-55: #f8fafc;
+  --color-slate-150: #e2e8f0;
+  --color-slate-205: #334155;
+  --color-slate-250: #64748b;
+  --color-slate-405: #94a3b8;
+  --color-slate-450: #94a3b8;
+  --color-slate-655: #475569;
+  --color-slate-705: #334155;
+  --color-slate-905: #0f172a;
+  --color-slate-933: #020617;
+  
+  --color-sky-105: #e0f2fe;
+  --color-sky-205: #7dd3fc;
+  --color-sky-305: #38bdf8;
+  --color-sky-405: #38bdf8;
+  --color-sky-450: #0ea5e9;
+  --color-sky-505: #0284c7;
+  
+  --color-orange-850: #9a3412;
+  --color-blue-105: #dbeafe;
+  --color-blue-405: #60a5fa;
+  --color-blue-650: #1d4ed8;
+  --color-blue-750: #1d4ed8;
+  --color-blue-805: #1e40af;
+  --color-blue-905: #1e3a8a;
+  --color-slate-650: #475569;
+  --color-zinc-650: #52525b;
+  --color-emerald-405: #34d399;
+  --color-emerald-650: #10b981;
+  --color-red-650: #ef4444;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Water drop keyframes and minor utility classes */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 5, 5;
+  animation: dash 2s linear infinite;
+}

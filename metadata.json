@@ -1,0 +1,6 @@
+{
+  "name": "Rainbow Aquafresh Systems",
+  "description": "Hyderabad's trusted RO Water Purifier Sales & Service with 20+ years of experience. Premium domestic and commercial water purification systems.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
