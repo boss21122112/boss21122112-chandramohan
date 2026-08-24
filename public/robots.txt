@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rainbowafs.com/sitemap.xml
+Sitemap: https://www.rainbowafs.com/sitemap.xml

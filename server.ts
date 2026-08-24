@@ -338,7 +338,7 @@ async function startServer() {
     "/index.php": "/",
     "/about.php": "/about",
     "/contact.php": "/contact",
-    "/products.php": "/products",
+    "/products.php": "/products/",
     "/ro-service.php": "/ro-service-hyderabad",
     "/ro-service-hyderabad.php": "/ro-service-hyderabad",
     "/ro-installation.php": "/ro-installation-hyderabad",
@@ -358,25 +358,23 @@ async function startServer() {
     });
   });
 
-  // Handle trailing slash redirects for non-trailing-slash canonical pages
-  const trailingSlashRedirects = [
-    "/ro-installation-hyderabad/",
-    "/ro-amc-service/",
-    "/commercial-ro-plants/",
-    "/ro-repair-hyderabad/",
-    "/ro-filter-replacement-hyderabad/",
-    "/about/",
-    "/contact/"
-  ];
+  // Specific canonical redirects
+  app.get("/products", (req, res) => {
+    res.redirect(301, "/products/");
+  });
 
-  trailingSlashRedirects.forEach((slashPath) => {
-    const canonicalPath = slashPath.slice(0, -1);
-    app.get(canonicalPath, (req, res, next) => {
-      if (req.path === slashPath) {
-        return res.redirect(301, canonicalPath);
-      }
-      next();
-    });
+  app.get("/ro-service-kothapet-hyderabad", (req, res) => {
+    res.redirect(301, "/ro-water-purifier-service-kothapet-hyderabad");
+  });
+
+  // Clean 301 trailing slash redirect for all non-canonical trailing-slash URLs
+  app.use((req, res, next) => {
+    if (req.method === "GET" && req.path.length > 1 && req.path.endsWith("/") && req.path !== "/products/") {
+      const query = req.url.slice(req.path.length);
+      const safePath = req.path.slice(0, -1);
+      return res.redirect(301, safePath + query);
+    }
+    next();
   });
 
   // Explicit route registrations for SEO crawlability and exact path matching
