@@ -77,6 +77,11 @@ async function startServer() {
     return aiClient;
   }
 
+  // Health check
+  app.get("/api/health", (req, res) => {
+    res.json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
   // 1. API Route for gallery generation
   app.post("/api/generate-gallery", async (req, res) => {
     try {

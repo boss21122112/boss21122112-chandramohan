@@ -268,7 +268,7 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15]">
-                RO Water Purifier Service in Hyderabad
+                RO Water Purifier Service & Repair in Hyderabad
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl font-normal">

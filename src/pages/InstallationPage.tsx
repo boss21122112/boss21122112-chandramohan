@@ -16,7 +16,7 @@ export const InstallationPage: React.FC<InstallationPageProps> = ({ onOpenBookin
             Professional Fitting & Shifting
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            RO Water Purifier Installation & Re-Installation Services in Hyderabad
+            RO Water Purifier Installation in Hyderabad
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
             Precision wall-mount, tabletop, and under-sink water purifier installation, re-installation, and shifting across all localities in Hyderabad and Secunderabad. We calibrate TDS levels, verify water pressure, and use 100% food-grade plumbing tubing.

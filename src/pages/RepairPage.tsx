@@ -16,7 +16,7 @@ export const RepairPage: React.FC<RepairPageProps> = ({ onOpenBooking }) => {
             Emergency Breakdown Support
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            RO Water Purifier Repair, Servicing & Breakdown Support in Hyderabad
+            RO Water Purifier Repair Service in Hyderabad
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
             Is your RO leaking, making loud vibrating noises, or running wastewater continuously? Rainbow Aquafresh Systems provides same-day emergency RO repair across all areas in Hyderabad. Honest diagnostic fee of just ₹150 — completely waived upon repair approval!

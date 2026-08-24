@@ -16,7 +16,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
             20+ Years of Drinking Water Excellence
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            About Rainbow Aquafresh Systems — Hyderabad's Trusted Water Purification Experts
+            About Rainbow Aquafresh Systems
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
             For over two decades, Rainbow Aquafresh Systems has been at the forefront of drinking water purification technology in Hyderabad, Telangana. We dedicate ourselves to delivering 100% pure, healthy, and mineral-balanced water to homes, institutions, and industries.

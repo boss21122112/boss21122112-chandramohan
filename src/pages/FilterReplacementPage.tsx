@@ -225,7 +225,7 @@ export const FilterReplacementPage: React.FC<FilterReplacementPageProps> = ({ on
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                Professional RO Filter Replacement in Hyderabad
+                RO Filter & Membrane Replacement in Hyderabad
               </h1>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">

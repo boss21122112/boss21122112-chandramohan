@@ -29,7 +29,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
             Complete Purification Catalog
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            RO Purifiers, Commercial Plants, Spare Membranes, Pumps & Certified Technicians in Hyderabad
+            RO Water Purifiers, Commercial Plants & Spare Parts in Hyderabad
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 font-normal">
             Explore our complete range of 100% genuine domestic water purifiers, industrial skid-mounted commercial RO systems, heavy-duty copper booster pumps, high-rejection TFC membranes, and certified field technicians.

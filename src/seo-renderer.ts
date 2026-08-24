@@ -68,7 +68,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/products/": {
-    title: "RO Purifiers & Commercial RO Plants Hyderabad | Rainbow",
+    title: "RO Water Purifiers & Spare Parts Hyderabad | Rainbow",
     description: "Buy domestic RO purifiers, commercial RO plants & spare membranes in Hyderabad. Original factory parts & certified technicians. Call +91 8885556965.",
     keywords: "RO Purifiers Hyderabad, RO Membranes Hyderabad, RO Booster Pump Hyderabad, Commercial RO Plant Price Hyderabad, RO Spare Parts Hyderabad, RO Technicians Hyderabad, Rainbow Aquafresh Systems",
     canonical: "https://www.rainbowafs.com/products/",
@@ -83,7 +83,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/products": {
-    title: "RO Purifiers & Commercial RO Plants Hyderabad | Rainbow",
+    title: "RO Water Purifiers & Spare Parts Hyderabad | Rainbow",
     description: "Buy domestic RO purifiers, commercial RO plants & spare membranes in Hyderabad. Original factory parts & certified technicians. Call +91 8885556965.",
     keywords: "RO Purifiers Hyderabad, RO Membranes Hyderabad, RO Booster Pump Hyderabad, Commercial RO Plant Price Hyderabad, RO Spare Parts Hyderabad, RO Technicians Hyderabad, Rainbow Aquafresh Systems",
     canonical: "https://www.rainbowafs.com/products/",
@@ -98,7 +98,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/ro-service-hyderabad": {
-    title: "RO Service Hyderabad | #1 Water Purifier Repair & Maintenance",
+    title: "RO Service Hyderabad | RO Purifier Repair & Maintenance",
     description: "Top-rated RO water purifier service in Hyderabad. Doorstep technician in 90 mins. All brands Kent, Aquaguard, Pureit, Livpure. Call +91 8885556965.",
     keywords: "RO Service Hyderabad, Water Purifier Repair Hyderabad, RO Maintenance Hyderabad, RO Technician Hyderabad, Kent Service Hyderabad, Aquaguard Service Hyderabad",
     canonical: "https://www.rainbowafs.com/ro-service-hyderabad",
@@ -114,7 +114,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/ro-installation-hyderabad": {
     title: "RO Installation Service Hyderabad | Wall Mount & Under-Sink",
-    description: "Professional RO water purifier installation and reinstallation in Hyderabad. Fast doorstep service, certified plumbing, genuine parts. Call +91 8885556965.",
+    description: "Professional RO water purifier installation & reinstallation in Hyderabad. Fast doorstep service, certified plumbing & spares. Call +91 8885556965.",
     keywords: "RO Installation Hyderabad, Water Purifier Installation Hyderabad, RO Wall Mount Hyderabad, RO Shifting Hyderabad",
     canonical: "https://www.rainbowafs.com/ro-installation-hyderabad",
     h1: "RO Water Purifier Installation in Hyderabad",
@@ -129,14 +129,14 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/ro-amc-service": {
     title: "RO AMC Service Hyderabad | Annual Maintenance Plans ₹1999",
-    description: "Annual Maintenance Contracts (AMC) for RO water purifiers in Hyderabad. Comprehensive coverage, free filter replacements, emergency repairs. Call +91 8885556965.",
+    description: "Annual Maintenance Contracts (AMC) for RO water purifiers in Hyderabad. Full coverage, free filter replacement, fast repairs. Call +91 8885556965.",
     keywords: "RO AMC Hyderabad, RO Annual Maintenance Contract Hyderabad, Water Purifier AMC Hyderabad, RO Maintenance Plan",
     canonical: "https://www.rainbowafs.com/ro-amc-service",
-    h1: "Annual Maintenance Contract (AMC) for RO Water Purifiers",
+    h1: "Annual Maintenance Contract (AMC) for RO Purifiers",
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.6; color: #1e293b;">
-        <h1>Annual Maintenance Contract (AMC) for RO Water Purifiers</h1>
+        <h1>Annual Maintenance Contract (AMC) for RO Purifiers</h1>
         <p>Protect your drinking water and save up to 40% on maintenance with comprehensive RO AMC plans in Hyderabad.</p>
         ${COMMON_FOOTER}
       </main>
@@ -144,7 +144,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/commercial-ro-plants": {
     title: "Commercial RO Plants Hyderabad | 25 LPH to 2000 LPH",
-    description: "Commercial & industrial RO plant manufacturers in Hyderabad. 50 LPH, 250 LPH, 500 LPH, 1000 LPH, 2000 LPH skids with SS/FRP build. Call +91 8885556965.",
+    description: "Commercial & industrial RO plant makers in Hyderabad. 50 LPH to 2000 LPH skids with SS/FRP build, installation & AMC. Call +91 8885556965.",
     keywords: "Commercial RO Plant Hyderabad, Industrial RO Plant Hyderabad, 500 LPH RO Plant Hyderabad, 1000 LPH RO Plant Price Hyderabad",
     canonical: "https://www.rainbowafs.com/commercial-ro-plants",
     h1: "Commercial & Industrial RO Plants in Hyderabad",
@@ -173,7 +173,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/ro-filter-replacement-hyderabad": {
-    title: "RO Filter Replacement Hyderabad | Genuine Membrane & Spares",
+    title: "RO Filter Replacement Hyderabad | Genuine Membrane Spares",
     description: "Doorstep RO filter and membrane replacement in Hyderabad. Original Filmtec membranes, sediment pre-filters, carbon blocks. Call +91 8885556965.",
     keywords: "RO Filter Replacement Hyderabad, RO Membrane Change Hyderabad, Water Purifier Filter Price Hyderabad, Filmtec Membrane Hyderabad",
     canonical: "https://www.rainbowafs.com/ro-filter-replacement-hyderabad",
@@ -189,7 +189,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/about": {
     title: "About Rainbow Aquafresh Systems | RO Experts Hyderabad",
-    description: "Learn about Rainbow Aquafresh Systems, Hyderabad's trusted water purification specialists since 2004. Quality water solutions and certified engineers.",
+    description: "Learn about Rainbow Aquafresh Systems, Hyderabad's trusted water purification specialists since 2004. Certified engineers. Call +91 8885556965.",
     keywords: "About Rainbow Aquafresh, Water Purifier Company Hyderabad, RO Experts Hyderabad",
     canonical: "https://www.rainbowafs.com/about",
     h1: "About Rainbow Aquafresh Systems",
@@ -204,7 +204,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/contact": {
     title: "Contact Rainbow Aquafresh Systems | RO Service Helpline",
-    description: "Contact Rainbow Aquafresh Systems for doorstep RO service in Hyderabad. Call +91 8885556965 or visit our Malakpet office.",
+    description: "Contact Rainbow Aquafresh Systems for doorstep RO service in Hyderabad. Call +91 8885556965 or visit our Malakpet office for queries.",
     keywords: "Contact Rainbow Aquafresh, RO Service Number Hyderabad, Water Purifier Phone Number",
     canonical: "https://www.rainbowafs.com/contact",
     h1: "Contact Rainbow Aquafresh Systems",
@@ -222,11 +222,11 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     description: "Read expert guides on RO water purification, TDS guidelines, filter maintenance, and technology comparisons in Hyderabad.",
     keywords: "Water Purifier Blog, RO Maintenance Guide, TDS Drinking Water Hyderabad, Water Purifier Tips",
     canonical: "https://www.rainbowafs.com/blog",
-    h1: "Water Purification Knowledge Hub & Guides",
+    h1: "Water Purification Guides & RO Knowledge Hub",
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.6; color: #1e293b;">
-        <h1>Water Purification Knowledge Hub & Guides</h1>
+        <h1>Water Purification Guides & RO Knowledge Hub</h1>
         <p>Expert articles on water purification technologies, TDS standards, and DIY maintenance.</p>
         ${COMMON_FOOTER}
       </main>
@@ -237,11 +237,11 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     description: "Read expert guides on RO water purification, TDS guidelines, filter maintenance, and technology comparisons in Hyderabad.",
     keywords: "Water Purifier Blog, RO Maintenance Guide, TDS Drinking Water Hyderabad, Water Purifier Tips",
     canonical: "https://www.rainbowafs.com/water-guide",
-    h1: "Water Purification Knowledge Hub & Guides",
+    h1: "Water Purification Guides & RO Knowledge Hub",
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.6; color: #1e293b;">
-        <h1>Water Purification Knowledge Hub & Guides</h1>
+        <h1>Water Purification Guides & RO Knowledge Hub</h1>
         <p>Expert articles on water purification technologies, TDS standards, and DIY maintenance.</p>
         ${COMMON_FOOTER}
       </main>
@@ -283,8 +283,8 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
 Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
   const routePath = `/${loc.slug}`;
   ROUTE_SEO_CONFIG[routePath] = {
-    title: `RO Water Purifier Service & Repair in ${loc.name}, Hyderabad | Rainbow`,
-    description: `Doorstep RO water purifier service, repair, filter replacement & AMC in ${loc.name}, Hyderabad (PIN: ${loc.pincode}). 90-min response. Call +91 8885556965.`,
+    title: `RO Service & Repair in ${loc.name}, Hyderabad | Rainbow`,
+    description: `Doorstep RO service & repair in ${loc.name}, Hyderabad. Fast 90-min technician arrival, genuine filter replacement & AMC. Call +91 8885556965.`,
     keywords: `RO Service ${loc.name}, Water Purifier Repair ${loc.name}, RO Filter Replacement ${loc.name}, Kent Service ${loc.name}, Aquaguard Service ${loc.name}, RO Repair Hyderabad`,
     canonical: `https://www.rainbowafs.com/${loc.slug}`,
     h1: `RO Water Purifier Service & Repair in ${loc.name}, Hyderabad`,
@@ -308,9 +308,13 @@ Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
 // 2. Populate the 15 Specialized & Brand Service Pages
 Object.entries(SPECIALIZED_SERVICES_DATA).forEach(([key, srv]) => {
   const routePath = `/${srv.slug}`;
+  let title = `${srv.shortTitle} in Hyderabad | Rainbow Aquafresh`;
+  if (title.length > 60) {
+    title = `${srv.shortTitle} Hyderabad | Rainbow`;
+  }
   ROUTE_SEO_CONFIG[routePath] = {
-    title: `${srv.title} | Rainbow Aquafresh Systems`,
-    description: `${srv.description.slice(0, 150)}... Call +91 8885556965 for doorstep service in Hyderabad.`,
+    title,
+    description: `${srv.shortTitle} in Hyderabad. Genuine parts, certified technicians, same-day doorstep service and warranty. Call +91 8885556965.`,
     keywords: `${srv.shortTitle} Hyderabad, RO Repair Hyderabad, RO Spares Hyderabad, Water Purifier Service Hyderabad`,
     canonical: `https://www.rainbowafs.com/${srv.slug}`,
     h1: srv.title,
@@ -334,9 +338,13 @@ Object.entries(SPECIALIZED_SERVICES_DATA).forEach(([key, srv]) => {
 // 3. Populate the 8 Commercial RO Plant Pages
 Object.entries(COMMERCIAL_PLANTS_DATA).forEach(([key, plant]) => {
   const routePath = `/${plant.slug}`;
+  let title = `${plant.shortTitle} in Hyderabad | Rainbow`;
+  if (title.length > 60) {
+    title = `${plant.shortTitle} Hyderabad | Rainbow`;
+  }
   ROUTE_SEO_CONFIG[routePath] = {
-    title: `${plant.title} | Rainbow Aquafresh`,
-    description: `${plant.description.slice(0, 150)}... Call +91 8885556965 for commercial quote in Hyderabad.`,
+    title,
+    description: `${plant.shortTitle} in Hyderabad. Industrial grade SS/FRP skids, turnkey installation, commissioning & AMC. Call +91 8885556965.`,
     keywords: `${plant.shortTitle} Hyderabad, Commercial RO Hyderabad, Industrial Water Treatment Hyderabad, 500 LPH Plant Price`,
     canonical: `https://www.rainbowafs.com/${plant.slug}`,
     h1: plant.title,
@@ -359,9 +367,15 @@ Object.entries(COMMERCIAL_PLANTS_DATA).forEach(([key, plant]) => {
 // 4. Populate the 15 Blog Article Pages
 Object.entries(BLOG_ARTICLES_DATA).forEach(([key, art]) => {
   const routePath = `/blog/${art.slug}`;
+  let title = art.title;
+  if (title.length > 40) {
+    title = `${title.slice(0, 38)}... | Rainbow Blog`;
+  } else {
+    title = `${title} | Rainbow Aquafresh Blog`;
+  }
   ROUTE_SEO_CONFIG[routePath] = {
-    title: `${art.title} | Rainbow Aquafresh Blog`,
-    description: `${art.excerpt} Learn more with Rainbow Aquafresh Systems Hyderabad.`,
+    title,
+    description: `${art.excerpt.slice(0, 90)}... Read expert guide at Rainbow Aquafresh Systems Hyderabad.`,
     keywords: `${art.title}, Water Purifier Blog, RO Advice Hyderabad, Water Science`,
     canonical: `https://www.rainbowafs.com/blog/${art.slug}`,
     h1: art.title,

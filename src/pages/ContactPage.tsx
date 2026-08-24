@@ -46,7 +46,7 @@ export const ContactPage: React.FC = () => {
             Get in Touch Instantly
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            Contact Rainbow Aquafresh Systems — RO Service & Support in Hyderabad
+            Contact Rainbow Aquafresh Systems
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
             Our customer support desk and technical field engineers are available 365 days a year across Hyderabad and Secunderabad. Speak directly with our team for immediate emergency repair, AMC enrollment, or commercial RO plant quotations.

@@ -16,7 +16,7 @@ export const CommercialPlantsPage: React.FC<CommercialPlantsPageProps> = ({ onOp
             Industrial Water Purification Systems
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-            Commercial & Industrial RO Water Plants (25 LPH to 2000 LPH) in Hyderabad
+            Commercial & Industrial RO Plants in Hyderabad
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
             Rainbow Aquafresh Systems manufactures, supplies, and maintains heavy-duty stainless steel and FRP commercial Reverse Osmosis plants across Hyderabad and Telangana. Engineered for continuous industrial duty cycles compliant with BIS drinking standards.

@@ -39,9 +39,9 @@ export const BlogPage: React.FC = () => {
                   </span>
                 </div>
 
-                <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
                   {selectedArticle.title}
-                </h1>
+                </h2>
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
                   {selectedArticle.excerpt}
                 </p>
@@ -116,7 +116,7 @@ export const BlogPage: React.FC = () => {
                 <BookOpen className="w-3.5 h-3.5 inline mr-1" /> Water Care & RO Knowledge Hub
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                Hyderabad RO Water Purifier Buyer & Service Guides
+                Water Purification Guides & RO Knowledge Hub
               </h1>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 Expert advice on water TDS levels, RO membrane replacement, borewell hardness treatment, and picking the right purification system for your Hyderabad neighborhood.
