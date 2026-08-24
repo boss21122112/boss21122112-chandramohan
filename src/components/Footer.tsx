@@ -456,6 +456,60 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenBlog, onOpenA
 
         </div>
 
+        {/* Regional SEO Directory Matrix */}
+        <div className="border-t border-slate-900 pt-8 pb-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-[11px]">
+          <div>
+            <h6 className="text-white font-bold mb-3 uppercase tracking-wider text-[10px] text-sky-400">Hyderabad Location Hubs</h6>
+            <ul className="space-y-1.5 text-slate-400">
+              <li><a href="/ro-service-dilsukhnagar-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Dilsukhnagar</a></li>
+              <li><a href="/ro-service-lb-nagar-hyderabad" className="hover:text-blue-400 transition-colors">RO Service LB Nagar</a></li>
+              <li><a href="/ro-service-kukatpally-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Kukatpally</a></li>
+              <li><a href="/ro-service-miyapur-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Miyapur</a></li>
+              <li><a href="/ro-service-gachibowli-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Gachibowli</a></li>
+              <li><a href="/ro-service-kondapur-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Kondapur</a></li>
+              <li><a href="/ro-service-secunderabad" className="hover:text-blue-400 transition-colors">RO Service Secunderabad</a></li>
+              <li><a href="/ro-service-hitech-city-hyderabad" className="hover:text-blue-400 transition-colors">RO Service Hitech City</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h6 className="text-white font-bold mb-3 uppercase tracking-wider text-[10px] text-sky-400">Specialized Services</h6>
+            <ul className="space-y-1.5 text-slate-400">
+              <li><a href="/ro-membrane-replacement-service-hyderabad" className="hover:text-blue-400 transition-colors">Membrane Replacement</a></li>
+              <li><a href="/ro-booster-pump-repair-replacement-hyderabad" className="hover:text-blue-400 transition-colors">Booster Pump Repair</a></li>
+              <li><a href="/ro-smps-power-supply-repair-hyderabad" className="hover:text-blue-400 transition-colors">SMPS Power Supply Repair</a></li>
+              <li><a href="/ro-uv-lamp-replacement-hyderabad" className="hover:text-blue-400 transition-colors">UV Lamp Replacement</a></li>
+              <li><a href="/ro-water-leakage-repair-hyderabad" className="hover:text-blue-400 transition-colors">Water Leakage Repair</a></li>
+              <li><a href="/kent-ro-service-repair-hyderabad" className="hover:text-blue-400 transition-colors">Kent RO Service</a></li>
+              <li><a href="/aquaguard-ro-service-repair-hyderabad" className="hover:text-blue-400 transition-colors">Aquaguard RO Repair</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h6 className="text-white font-bold mb-3 uppercase tracking-wider text-[10px] text-sky-400">Commercial & Industrial RO</h6>
+            <ul className="space-y-1.5 text-slate-400">
+              <li><a href="/commercial-ro-plant-installation-hyderabad" className="hover:text-blue-400 transition-colors">Commercial RO Installation</a></li>
+              <li><a href="/commercial-ro-plant-amc-maintenance-hyderabad" className="hover:text-blue-400 transition-colors">Commercial Plant AMC</a></li>
+              <li><a href="/industrial-ro-plant-manufacturers-hyderabad" className="hover:text-blue-400 transition-colors">Industrial Plant Makers</a></li>
+              <li><a href="/apartment-gated-community-ro-plants-hyderabad" className="hover:text-blue-400 transition-colors">Apartment RO Systems</a></li>
+              <li><a href="/hospital-healthcare-ro-plants-hyderabad" className="hover:text-blue-400 transition-colors">Hospital RO Plants</a></li>
+              <li><a href="/school-college-ro-water-plants-hyderabad" className="hover:text-blue-400 transition-colors">School Water Plants</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h6 className="text-white font-bold mb-3 uppercase tracking-wider text-[10px] text-sky-400">Water Guides & Knowledge</h6>
+            <ul className="space-y-1.5 text-slate-400">
+              <li><a href="/blog/ro-vs-uv-vs-uf-water-purifier-differences" className="hover:text-blue-400 transition-colors">RO vs UV vs UF Guide</a></li>
+              <li><a href="/blog/best-water-purifier-for-hyderabad-water" className="hover:text-blue-400 transition-colors">Best Purifier for Hyderabad</a></li>
+              <li><a href="/blog/how-often-should-ro-filters-be-changed" className="hover:text-blue-400 transition-colors">Filter Change Schedule</a></li>
+              <li><a href="/blog/what-is-tds-in-drinking-water-hyderabad" className="hover:text-blue-400 transition-colors">Drinking Water TDS Guide</a></li>
+              <li><a href="/blog/benefits-of-copper-alkaline-ro-water" className="hover:text-blue-400 transition-colors">Copper Alkaline Benefits</a></li>
+              <li><a href="/blog/best-water-purifier-for-borewell-water" className="hover:text-blue-400 transition-colors">Borewell Water Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+
         {/* Legal and Technical SEO status line */}
         <div className="border-t border-slate-900 pt-8 mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p className="text-center sm:text-left">

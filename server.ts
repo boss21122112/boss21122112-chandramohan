@@ -375,7 +375,7 @@ async function startServer() {
   });
 
   // Explicit route registrations for SEO crawlability and exact path matching
-  const explicitRoutes = [
+  const explicitRoutes = Array.from(new Set([
     "/",
     "/products",
     "/products/",
@@ -388,8 +388,11 @@ async function startServer() {
     "/ro-water-purifier-service-kothapet-hyderabad",
     "/ro-service-kothapet-hyderabad",
     "/about",
-    "/contact"
-  ];
+    "/contact",
+    "/blog",
+    "/water-guide",
+    ...Object.keys(ROUTE_SEO_CONFIG)
+  ]));
 
   explicitRoutes.forEach((routePath) => {
     app.get(routePath, (req, res) => {

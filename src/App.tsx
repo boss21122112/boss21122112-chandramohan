@@ -66,6 +66,14 @@ import { LeadForm } from './components/LeadForm';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GoogleMapSection } from './components/GoogleMapSection';
 import { BlogPage } from './pages/BlogPage';
+import { LocationServicePage } from './pages/LocationServicePage';
+import { SpecificServicePage } from './pages/SpecificServicePage';
+import { CommercialPlantDetailPage } from './pages/CommercialPlantDetailPage';
+import { BlogArticlePage } from './pages/BlogArticlePage';
+import { HYDERABAD_LOCATIONS_DATA } from './data/locationPagesData';
+import { SPECIALIZED_SERVICES_DATA } from './data/servicePagesData';
+import { COMMERCIAL_PLANTS_DATA } from './data/commercialPagesData';
+import { BLOG_ARTICLES_DATA } from './data/blogArticlesData';
 
 export const KEY_LEADS = 'RAINBOW_AQUAFRESH_LOCAL_LEADS';
 
@@ -642,6 +650,23 @@ export default function App() {
           <KothapetServicePage onOpenBooking={() => setIsServiceModalOpen(true)} />
         ) : currentPath === '/ro-service-hyderabad' ? (
           <RoServiceHyderabadPage onOpenBooking={() => setIsServiceModalOpen(true)} />
+        ) : currentPath.startsWith('/blog/') ? (
+          <BlogArticlePage articleKey={currentPath.replace('/blog/', '')} />
+        ) : Object.keys(HYDERABAD_LOCATIONS_DATA).some(k => HYDERABAD_LOCATIONS_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) ? (
+          <LocationServicePage 
+            locationKey={Object.keys(HYDERABAD_LOCATIONS_DATA).find(k => HYDERABAD_LOCATIONS_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) || ''} 
+            onOpenBooking={() => setIsServiceModalOpen(true)} 
+          />
+        ) : Object.keys(SPECIALIZED_SERVICES_DATA).some(k => SPECIALIZED_SERVICES_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) ? (
+          <SpecificServicePage 
+            serviceKey={Object.keys(SPECIALIZED_SERVICES_DATA).find(k => SPECIALIZED_SERVICES_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) || ''} 
+            onOpenBooking={() => setIsServiceModalOpen(true)} 
+          />
+        ) : Object.keys(COMMERCIAL_PLANTS_DATA).some(k => COMMERCIAL_PLANTS_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) ? (
+          <CommercialPlantDetailPage 
+            plantKey={Object.keys(COMMERCIAL_PLANTS_DATA).find(k => COMMERCIAL_PLANTS_DATA[k].slug === currentPath.replace('/', '') || k === currentPath.replace('/', '')) || ''} 
+            onOpenBooking={() => setIsServiceModalOpen(true)} 
+          />
         ) : (
           <>
         {/* Breadcrumbs Navigation */}
