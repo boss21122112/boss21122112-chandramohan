@@ -14,6 +14,7 @@ const PORT = 3000;
 
 async function startServer() {
   const app = express();
+  app.enable("strict routing");
 
   // Enable HTTP response compression (gzip/brotli) for reduced latency and fast response time
   app.use(compression());
@@ -49,6 +50,19 @@ async function startServer() {
     if (host === "rainbowafs.com" || host.startsWith("rainbowafs.com:")) {
       const targetUrl = `https://www.rainbowafs.com${req.originalUrl}`;
       return res.redirect(301, targetUrl);
+    }
+    next();
+  });
+
+  // 2. 301 Redirect any uppercase URLs to lowercase
+  app.use((req, res, next) => {
+    if (req.method === "GET" && !req.path.startsWith("/api/")) {
+      const pathOnly = req.path;
+      if (/[A-Z]/.test(pathOnly)) {
+        const query = req.url.slice(req.path.length);
+        const lowerPath = pathOnly.toLowerCase();
+        return res.redirect(301, lowerPath + query);
+      }
     }
     next();
   });
@@ -380,7 +394,6 @@ async function startServer() {
   // Explicit route registrations for SEO crawlability and exact path matching
   const explicitRoutes = Array.from(new Set([
     "/",
-    "/products",
     "/products/",
     "/ro-service-hyderabad",
     "/ro-installation-hyderabad",
@@ -389,7 +402,6 @@ async function startServer() {
     "/ro-repair-hyderabad",
     "/ro-filter-replacement-hyderabad",
     "/ro-water-purifier-service-kothapet-hyderabad",
-    "/ro-service-kothapet-hyderabad",
     "/about",
     "/contact",
     "/blog",
