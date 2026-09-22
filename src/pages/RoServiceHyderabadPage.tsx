@@ -49,7 +49,7 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
     "priceRange": "₹150 - ₹4500",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "16-10-27/109, 33-2RT, MCH Colony, Malakpet",
+      "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
       "addressLocality": "Hyderabad",
       "addressRegion": "Telangana",
       "postalCode": "500036",
@@ -983,7 +983,7 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
 
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 max-w-xl mx-auto space-y-3 text-xs sm:text-sm text-slate-200">
             <div className="font-bold text-white text-base">Rainbow Aquafresh Systems</div>
-            <p>16-10-27/109, 33-2RT, MCH Colony, Malakpet, Hyderabad – 500036</p>
+            <p>16-10-27/109, 37-2RT, MCH Colony, Malakpet, Hyderabad – 500036</p>
             <p className="font-mono text-emerald-300 font-bold">Helpline: +91 88855 56965 | +91 83412 56965</p>
           </div>
 

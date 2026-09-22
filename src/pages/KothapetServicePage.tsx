@@ -45,7 +45,7 @@ export const KothapetServicePage: React.FC<KothapetServicePageProps> = ({ onOpen
     "priceRange": "₹150 - ₹4500",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "16-10-27/109, 33-2RT, MCH Colony, Malakpet",
+      "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
       "addressLocality": "Hyderabad",
       "addressRegion": "Telangana",
       "postalCode": "500036",
@@ -1004,7 +1004,7 @@ export const KothapetServicePage: React.FC<KothapetServicePageProps> = ({ onOpen
           {/* Business contact card block */}
           <div className="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 max-w-2xl mx-auto space-y-4 text-xs">
             <div className="text-sky-300 font-mono uppercase font-bold text-xs">Rainbow Aquafresh Systems • Head Branch</div>
-            <p className="text-slate-200">16-10-27/109, 33-2RT, MCH Colony, Malakpet, Hyderabad – 500036</p>
+            <p className="text-slate-200">16-10-27/109, 37-2RT, MCH Colony, Malakpet, Hyderabad – 500036</p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm font-bold pt-2">
               <a 

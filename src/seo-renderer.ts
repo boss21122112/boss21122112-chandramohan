@@ -41,12 +41,12 @@ const COMMON_FOOTER = `
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; font-size: 14px; color: #475569; line-height: 1.6;">
     <div>
       <p style="margin-bottom: 8px;"><strong>Helpline Phone:</strong> <a href="tel:+918885556965" style="color: #2563eb; font-weight: bold; text-decoration: none;">+91 8885556965</a></p>
-      <p style="margin-bottom: 8px;"><strong>Alternate Support:</strong> <a href="tel:+919966555965" style="color: #2563eb; font-weight: bold; text-decoration: none;">+91 9966555965</a></p>
+      <p style="margin-bottom: 8px;"><strong>Alternate Support:</strong> <a href="tel:+918341256965" style="color: #2563eb; font-weight: bold; text-decoration: none;">+91 8341256965</a></p>
       <p style="margin-bottom: 8px;"><strong>WhatsApp Support:</strong> <a href="https://wa.me/918885556965" style="color: #16a34a; font-weight: bold; text-decoration: none;">Chat with RO Expert</a></p>
       <p style="margin-bottom: 0;"><strong>Customer Support Email:</strong> support@rainbowafs.com</p>
     </div>
     <div>
-      <p style="margin-bottom: 8px;"><strong>Head Office Address:</strong> 16-10-27/109, 33-2RT, MCH Colony, Malakpet, Hyderabad, Telangana 500036, India</p>
+      <p style="margin-bottom: 8px;"><strong>Head Office Address:</strong> 16-10-27/109, 37-2RT, MCH Colony, Malakpet, Hyderabad, Telangana 500036, India</p>
       <p style="margin-bottom: 8px;"><strong>Service Hours:</strong> Monday to Sunday: 8:00 AM – 9:00 PM</p>
       <p style="margin-bottom: 0;"><strong>Doorstep Response:</strong> Within 60 to 90 Minutes across Greater Hyderabad</p>
     </div>
@@ -641,12 +641,12 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
             </div>
             <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; border-radius: 8px;">
               <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Alternate Helpline</h3>
-              <p style="font-size: 18px; font-weight: 800; color: #2563eb; margin-bottom: 6px;"><a href="tel:+919966555965" style="color: #2563eb; text-decoration: none;">+91 9966555965</a></p>
+              <p style="font-size: 18px; font-weight: 800; color: #2563eb; margin-bottom: 6px;"><a href="tel:+918341256965" style="color: #2563eb; text-decoration: none;">+91 8341256965</a></p>
               <p style="font-size: 13px; color: #64748b; margin: 0;">Commercial plant sales & AMC renewal</p>
             </div>
             <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 18px; border-radius: 8px;">
               <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Head Office Address</h3>
-              <p style="font-size: 14px; color: #334155; margin: 0;">16-10-27/109, 33-2RT, MCH Colony, Malakpet, Hyderabad, Telangana 500036</p>
+              <p style="font-size: 14px; color: #334155; margin: 0;">16-10-27/109, 37-2RT, MCH Colony, Malakpet, Hyderabad, Telangana 500036</p>
             </div>
           </div>
         </section>

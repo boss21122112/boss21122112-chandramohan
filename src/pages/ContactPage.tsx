@@ -87,7 +87,7 @@ export const ContactPage: React.FC = () => {
                   <h3 className="font-bold text-slate-900 text-sm">Canonical Address</h3>
                   <p className="text-xs text-slate-600 leading-relaxed mt-1">
                     <strong>Rainbow Aquafresh Systems</strong><br />
-                    16-10-27/109, 33-2RT, MCH Colony, Old Malakpet,<br />
+                    16-10-27/109, 37-2RT, MCH Colony, Old Malakpet,<br />
                     Hyderabad, Telangana 500036
                   </p>
                 </div>

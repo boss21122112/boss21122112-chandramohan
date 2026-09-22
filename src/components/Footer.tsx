@@ -53,7 +53,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenBlog, onOpenA
         'priceRange': '$$',
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': '16-10-27/109, 33-2RT, MCH Colony, Malakpet',
+          'streetAddress': '16-10-27/109, 37-2RT, MCH Colony, Malakpet',
           'addressLocality': 'Hyderabad',
           'addressRegion': 'Telangana',
           'postalCode': '500036',

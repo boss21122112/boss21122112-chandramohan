@@ -558,7 +558,7 @@ export const GOOGLE_REVIEWS: CustomerReview[] = [
 export const CONTACT_INFO = {
   companyName: 'Rainbow Aquafresh Systems',
   tagline: 'Complete Water Purifier Solutions',
-  address: '16-10-27/109, 33-2RT, MCH Colony, Old Malakpet, Hyderabad, Telangana 500036',
+  address: '16-10-27/109, 37-2RT, MCH Colony, Old Malakpet, Hyderabad, Telangana 500036',
   phones: ['+91 8885556965', '+91 8341256965'],
   rawPhones: ['+918885556965', '+918341256965'],
   whatsapp: '+918885556965',
