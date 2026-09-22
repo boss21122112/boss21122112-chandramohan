@@ -229,6 +229,42 @@ export const CommercialPlantDetailPage: React.FC<CommercialPlantDetailPageProps>
               </div>
             ))}
           </div>
+
+          {/* Related Commercial Solutions */}
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 mt-8">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-600 mb-3">
+              Explore Commercial Water Treatment Solutions:
+            </h3>
+            <div className="flex flex-wrap gap-2.5">
+              <a href="/commercial-ro-plants" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                All Commercial RO Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/commercial-ro-plant-installation-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Commercial Installation <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/commercial-ro-plant-amc-maintenance-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Commercial AMC <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/industrial-ro-plant-manufacturers-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Industrial RO Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/apartment-gated-community-ro-plants-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Apartment Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/hospital-healthcare-ro-plants-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Hospital Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/school-college-ro-water-plants-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                School & College Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/hotel-resort-commercial-ro-plants-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Hotel & Resort Plants <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/restaurant-cafe-ro-water-purification-hyderabad" className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50/80 hover:bg-blue-100 px-3.5 py-2 rounded-xl transition-colors">
+                Restaurant & Cafe RO <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

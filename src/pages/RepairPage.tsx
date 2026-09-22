@@ -94,6 +94,121 @@ export const RepairPage: React.FC<RepairPageProps> = ({ onOpenBooking }) => {
           </div>
         </div>
 
+        {/* Specialized Component Repair Services Directory */}
+        <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+          <div>
+            <span className="text-blue-600 font-bold text-xs uppercase tracking-wider">Targeted Repair Solutions</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Specialized RO Component Repairs in Hyderabad</h2>
+            <p className="text-slate-600 text-sm mt-2 max-w-3xl">
+              Need a specific spare replacement? We carry certified 100% original OEM parts with comprehensive warranty:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            <a href="/ro-booster-pump-repair-replacement-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  Booster Pump Repair <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Copper 75/100 GPD motor troubleshooting, head leak repairs & replacement.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-pcb-circuit-board-repair-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  PCB Circuit Repair <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Microcontroller board diagnosis, relay fixes & electrical sensor calibration.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-smps-power-supply-repair-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  SMPS Adapter Fix <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Heavy-duty 24V / 36V 2.5A power supplies with surge protection.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-uv-lamp-replacement-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  UV Lamp Replacement <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Philips 11W UV tube replacement, quartz sleeve cleaning & ballast repair.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-tds-adjustment-controller-service-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  TDS Controller Tuning <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Mineralizer flow regulator balancing to achieve optimal 80-150 PPM drinking TDS.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-water-leakage-repair-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  Leakage & Pipe Repair <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Cracked housing replacement, quick-connect elbow fixes & food-grade tubing.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/ro-sanitization-tank-cleaning-service-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  Tank Sanitization <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Food-grade sanitization, biofilm disinfection & internal pipe descaling.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+
+            <a href="/complete-ro-maintenance-service-hyderabad" className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm flex items-center justify-between mb-1">
+                  Complete Maintenance <ArrowRight className="w-4 h-4 text-blue-600" />
+                </h3>
+                <p className="text-slate-600">Comprehensive 12-point preventative service & full system health audit.</p>
+              </div>
+              <span className="mt-3 text-blue-600 font-semibold">Learn More →</span>
+            </a>
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-2 text-xs">
+            <span className="font-bold text-slate-700 py-1">Brand Repair Centers:</span>
+            <a href="/kent-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Kent RO</a>
+            <a href="/aquaguard-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Aquaguard</a>
+            <a href="/livpure-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Livpure</a>
+            <a href="/pureit-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Pureit</a>
+            <a href="/ao-smith-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">AO Smith</a>
+          </div>
+
+          <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-3 text-xs">
+            <span className="font-bold text-slate-700 py-1">Related Services:</span>
+            <a href="/ro-filter-replacement-hyderabad" className="text-blue-600 hover:underline py-1">RO Filter Replacement</a>
+            <span className="text-slate-300">•</span>
+            <a href="/ro-installation-hyderabad" className="text-blue-600 hover:underline py-1">RO Installation</a>
+            <span className="text-slate-300">•</span>
+            <a href="/ro-amc-service" className="text-blue-600 hover:underline py-1">RO AMC Plans</a>
+            <span className="text-slate-300">•</span>
+            <a href="/ro-shifting-uninstallation-reinstallation-hyderabad" className="text-blue-600 hover:underline py-1">RO Shifting & Reinstallation</a>
+            <span className="text-slate-300">•</span>
+            <a href="/ro-service-hyderabad" className="text-blue-600 hover:underline py-1">All Hyderabad Locations</a>
+          </div>
+        </div>
+
         {/* Repair Pricing & Diagnostics */}
         <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

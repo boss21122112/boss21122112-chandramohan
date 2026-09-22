@@ -138,6 +138,55 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({ articleKey }) 
             </div>
           )}
 
+          {/* Related Services */}
+          <div className="mt-12 pt-8 border-t border-slate-100">
+            <h3 className="text-base font-bold uppercase tracking-wider text-slate-500 mb-4">
+              Related Doorstep Water Purifier Services:
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a
+                href="/ro-service-hyderabad"
+                className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/40 transition-all group"
+              >
+                <div className="flex items-center justify-between text-xs font-bold text-blue-600">
+                  <span>Hyderabad RO Service Hub</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">Doorstep 90-min multi-brand service across all 30+ Hyderabad zones.</p>
+              </a>
+              <a
+                href="/ro-filter-replacement-hyderabad"
+                className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/40 transition-all group"
+              >
+                <div className="flex items-center justify-between text-xs font-bold text-blue-600">
+                  <span>RO Filter Replacement</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">100% genuine sediment, carbon & high-rejection RO membrane filters.</p>
+              </a>
+              <a
+                href="/ro-repair-hyderabad"
+                className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/40 transition-all group"
+              >
+                <div className="flex items-center justify-between text-xs font-bold text-blue-600">
+                  <span>RO Repair & Troubleshooting</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">Pump repairs, SMPS power supplies, leakage fixes & electronics.</p>
+              </a>
+              <a
+                href="/ro-amc-service"
+                className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/40 transition-all group"
+              >
+                <div className="flex items-center justify-between text-xs font-bold text-blue-600">
+                  <span>Annual Maintenance Contracts (AMC)</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <p className="text-xs text-slate-600 mt-1">Year-round comprehensive coverage with free filters and labor.</p>
+              </a>
+            </div>
+          </div>
+
           {/* Callout Box */}
           <div className="mt-12 p-6 rounded-2xl bg-blue-600 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
             <div>

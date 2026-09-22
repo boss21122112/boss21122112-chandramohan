@@ -90,12 +90,7 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
       { "@type": "AdministrativeArea", "name": "Miyapur, Hyderabad" },
       { "@type": "AdministrativeArea", "name": "Begumpet, Hyderabad" },
       { "@type": "AdministrativeArea", "name": "Uppal, Hyderabad" }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "480"
-    }
+    ]
   };
 
   const serviceSchema = {
@@ -579,6 +574,63 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
 
           </div>
 
+          {/* Specialized Component Repair & Service Directory */}
+          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <h3 className="text-lg font-bold text-slate-900">
+              Specialized RO Component Repair & Maintenance Services in Hyderabad
+            </h3>
+            <p className="text-xs text-slate-600">
+              Looking for a specific component fix? Our technicians provide dedicated repairs with 100% original parts:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <a href="/ro-booster-pump-repair-replacement-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Booster Pump Repair</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-pcb-circuit-board-repair-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>PCB Circuit Repair</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-smps-power-supply-repair-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>SMPS Power Supply</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-uv-lamp-replacement-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>UV Lamp Replacement</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-tds-adjustment-controller-service-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>TDS Controller Tuning</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-water-leakage-repair-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Water Leakage Repair</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-sanitization-tank-cleaning-service-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Tank Sanitization</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/complete-ro-maintenance-service-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Complete RO Maintenance</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-membrane-replacement-service-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Membrane Replacement</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-shifting-uninstallation-reinstallation-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>RO Uninstallation / Shifting</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-repair-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>General RO Repairs</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+              <a href="/ro-filter-replacement-hyderabad" className="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-colors font-semibold text-slate-800 flex items-center justify-between">
+                <span>Filter Replacement</span> <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              </a>
+            </div>
+
+            <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-2 text-xs">
+              <span className="font-bold text-slate-700">Multi-Brand Service Centers:</span>
+              <a href="/kent-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Kent RO Service</a>
+              <a href="/aquaguard-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Aquaguard Service</a>
+              <a href="/livpure-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Livpure Service</a>
+              <a href="/pureit-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">Pureit Service</a>
+              <a href="/ao-smith-ro-service-repair-hyderabad" className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold transition-colors">AO Smith Service</a>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -840,21 +892,21 @@ export const RoServiceHyderabadPage: React.FC<RoServiceHyderabadPageProps> = ({ 
             <div className="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
               <h3 className="font-bold text-slate-900 text-sm text-blue-700">East Hyderabad & Suburbs</h3>
               <p className="text-slate-600 leading-relaxed">
-                Malakpet, <a href="/ro-water-purifier-service-kothapet-hyderabad" className="text-blue-600 font-bold hover:underline">Kothapet</a>, Dilsukhnagar, LB Nagar, Chaitanyapuri, Saroornagar, Nagole, Uppal, Ramanthapur, Vanasthalipuram, Hayathnagar, Santoshnagar, Champapet.
+                <a href="/ro-service-malakpet-hyderabad" className="text-blue-600 hover:underline">Malakpet</a>, <a href="/ro-water-purifier-service-kothapet-hyderabad" className="text-blue-600 hover:underline">Kothapet</a>, <a href="/ro-service-dilsukhnagar-hyderabad" className="text-blue-600 hover:underline">Dilsukhnagar</a>, <a href="/ro-service-lb-nagar-hyderabad" className="text-blue-600 hover:underline">LB Nagar</a>, <a href="/ro-service-chaitanyapuri-hyderabad" className="text-blue-600 hover:underline">Chaitanyapuri</a>, Saroornagar, <a href="/ro-service-nagole-hyderabad" className="text-blue-600 hover:underline">Nagole</a>, <a href="/ro-service-uppal-hyderabad" className="text-blue-600 hover:underline">Uppal</a>, <a href="/ro-service-ramanthapur-hyderabad" className="text-blue-600 hover:underline">Ramanthapur</a>, <a href="/ro-service-vanasthalipuram-hyderabad" className="text-blue-600 hover:underline">Vanasthalipuram</a>, <a href="/ro-service-hayathnagar-hyderabad" className="text-blue-600 hover:underline">Hayathnagar</a>, Santoshnagar, Champapet.
               </p>
             </div>
 
             <div className="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
               <h3 className="font-bold text-slate-900 text-sm text-blue-700">West Hyderabad & IT Corridor</h3>
               <p className="text-slate-600 leading-relaxed">
-                Madhapur, Gachibowli, Kondapur, Hitec City, Jubilee Hills, Banjara Hills, Kukatpally, KPHB Colony, Miyapur, Chandanagar, Serilingampally, Manikonda, Financial District, Narsingi.
+                <a href="/ro-service-hitech-city-hyderabad" className="text-blue-600 hover:underline">Hitec City</a>, <a href="/ro-service-gachibowli-hyderabad" className="text-blue-600 hover:underline">Gachibowli</a>, <a href="/ro-service-kondapur-hyderabad" className="text-blue-600 hover:underline">Kondapur</a>, <a href="/ro-service-jubilee-hills-hyderabad" className="text-blue-600 hover:underline">Jubilee Hills</a>, <a href="/ro-service-banjara-hills-hyderabad" className="text-blue-600 hover:underline">Banjara Hills</a>, <a href="/ro-service-kukatpally-hyderabad" className="text-blue-600 hover:underline">Kukatpally</a>, <a href="/ro-service-kphb-hyderabad" className="text-blue-600 hover:underline">KPHB Colony</a>, <a href="/ro-service-miyapur-hyderabad" className="text-blue-600 hover:underline">Miyapur</a>, <a href="/ro-service-manikonda-hyderabad" className="text-blue-600 hover:underline">Manikonda</a>, Madhapur, Chandanagar, Serilingampally, Financial District, Narsingi.
               </p>
             </div>
 
             <div className="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
               <h3 className="font-bold text-slate-900 text-sm text-blue-700">Central & North Hyderabad</h3>
               <p className="text-slate-600 leading-relaxed">
-                Begumpet, Secunderabad, Ameerpet, SR Nagar, Panjagutta, Somajiguda, Khairatabad, Himayatnagar, Narayanaguda, Musheerabad, Alwal, Malkajgiri, Kompally, Suchitra, Sainikpuri.
+                <a href="/ro-service-secunderabad" className="text-blue-600 hover:underline">Secunderabad</a>, <a href="/ro-service-tarnaka-hyderabad" className="text-blue-600 hover:underline">Tarnaka</a>, Begumpet, Ameerpet, SR Nagar, Sanathnagar, Panjagutta, Somajiguda, Khairatabad, Himayatnagar, Narayanaguda, Musheerabad, Alwal, Malkajgiri, Kompally, Suchitra, Sainikpuri.
               </p>
             </div>
 

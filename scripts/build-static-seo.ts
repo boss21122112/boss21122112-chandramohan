@@ -50,12 +50,26 @@ async function generateStaticPages() {
     }
 
     // Replace or insert Canonical link
+    const pageCanonical = seo.canonical || ('https://www.rainbowafs.com' + (routePath === '/' ? '/' : routePath));
     if (seo.canonical) {
       if (html.includes('<link rel="canonical"')) {
         html = html.replace(/<link rel="canonical" href=".*?" \/>/i, `<link rel="canonical" href="${seo.canonical}" />`);
       } else {
         html = html.replace('</head>', `  <link rel="canonical" href="${seo.canonical}" />\n</head>`);
       }
+    }
+
+    // Replace Open Graph and Twitter Meta Tags
+    if (seo.title) {
+      html = html.replace(/<meta property="og:title" content=".*?" \/>/i, `<meta property="og:title" content="${seo.title}" />`);
+      html = html.replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${seo.title}" />`);
+    }
+    if (seo.description) {
+      html = html.replace(/<meta property="og:description" content=".*?" \/>/i, `<meta property="og:description" content="${seo.description}" />`);
+      html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${seo.description}" />`);
+    }
+    if (pageCanonical) {
+      html = html.replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${pageCanonical}" />`);
     }
 
     // Inject SSR Crawlable Content into root div

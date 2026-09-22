@@ -359,12 +359,38 @@ async function startServer() {
   });
 
   // Specific canonical redirects
-  app.get("/products", (req, res) => {
-    res.redirect(301, "/products/");
+  app.get("/products", (req, res, next) => {
+    if (req.path === "/products") {
+      const query = req.url.slice(req.path.length);
+      return res.redirect(301, "/products/" + query);
+    }
+    next();
   });
 
   app.get("/ro-service-kothapet-hyderabad", (req, res) => {
     res.redirect(301, "/ro-water-purifier-service-kothapet-hyderabad");
+  });
+
+  // 301 Permanent Redirect for uppercase pathnames to lowercase (preserves query params & trailing slash rules)
+  app.use((req, res, next) => {
+    if (req.method !== "GET" && req.method !== "HEAD") return next();
+    if (req.path.startsWith("/api/") || req.path.startsWith("/@")) return next();
+    if (req.path.includes(".") && !req.path.endsWith(".html") && !req.path.endsWith(".php")) return next();
+
+    if (/[A-Z]/.test(req.path)) {
+      let targetPath = req.path.toLowerCase();
+      if (phpRedirects[targetPath]) {
+        targetPath = phpRedirects[targetPath];
+      } else if (targetPath === "/products") {
+        targetPath = "/products/";
+      } else if (targetPath.length > 1 && targetPath.endsWith("/") && targetPath !== "/products/") {
+        targetPath = targetPath.slice(0, -1);
+      }
+      const queryIndex = req.originalUrl.indexOf("?");
+      const queryString = queryIndex !== -1 ? req.originalUrl.slice(queryIndex) : "";
+      return res.redirect(301, targetPath + queryString);
+    }
+    next();
   });
 
   // Clean 301 trailing slash redirect for all non-canonical trailing-slash URLs

@@ -147,6 +147,73 @@ export const CommercialPlantsPage: React.FC<CommercialPlantsPageProps> = ({ onOp
           </div>
         </div>
 
+        {/* Commercial & Industrial Water Solutions Directory */}
+        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-lg space-y-6">
+          <div>
+            <span className="text-blue-600 font-bold text-xs uppercase tracking-wider">Turnkey Engineering Directory</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Specialized Commercial RO Plant Solutions</h2>
+            <p className="text-slate-600 text-sm mt-2">Explore custom engineered water purification systems tailored to your industry requirements across Hyderabad and Telangana.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="/commercial-ro-plant-installation-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Commercial RO Installation <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Custom skid mounting, plumbing & electrical commissioning.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/commercial-ro-plant-amc-maintenance-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Commercial RO AMC <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Preventative maintenance, antiscalant dosing & membrane descaling.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/industrial-ro-plant-manufacturers-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Industrial RO Plants <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Up to 20,000 LPH heavy-duty manufacturing skids.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/apartment-gated-community-ro-plants-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Apartment & Gated Communities <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Centralized water purification for residential societies.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/hospital-healthcare-ro-plants-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Hospital & Healthcare Plants <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Dialysis grade, sterile low-conductivity water systems.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/school-college-ro-water-plants-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">School & College RO Plants <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">High volume drinking water coolers for campus students.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/hotel-resort-commercial-ro-plants-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Hotel & Resort RO Plants <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Dining, kitchen, laundry and boiler water treatment.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+            <a href="/restaurant-cafe-ro-water-purification-hyderabad" className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900 flex items-center justify-between">Restaurant & Cafe Purification <ArrowRight className="w-4 h-4 text-blue-600" /></h3>
+                <p className="text-xs text-slate-500 mt-2">Beverage-grade water for espresso and culinary prep.</p>
+              </div>
+              <span className="text-xs text-blue-600 font-semibold mt-3">Explore Service →</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );

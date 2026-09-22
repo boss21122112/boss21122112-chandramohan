@@ -74,6 +74,7 @@ import { HYDERABAD_LOCATIONS_DATA } from './data/locationPagesData';
 import { SPECIALIZED_SERVICES_DATA } from './data/servicePagesData';
 import { COMMERCIAL_PLANTS_DATA } from './data/commercialPagesData';
 import { BLOG_ARTICLES_DATA } from './data/blogArticlesData';
+import { ROUTE_SEO_CONFIG } from './seo-renderer';
 
 export const KEY_LEADS = 'RAINBOW_AQUAFRESH_LOCAL_LEADS';
 
@@ -100,6 +101,53 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (typeof document !== 'undefined') {
+      const seo = ROUTE_SEO_CONFIG[currentPath] || ROUTE_SEO_CONFIG['/'];
+      if (seo) {
+        document.title = seo.title;
+
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+          metaDesc = document.createElement('meta');
+          metaDesc.setAttribute('name', 'description');
+          document.head.appendChild(metaDesc);
+        }
+        metaDesc.setAttribute('content', seo.description);
+
+        let metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (!metaKeywords) {
+          metaKeywords = document.createElement('meta');
+          metaKeywords.setAttribute('name', 'keywords');
+          document.head.appendChild(metaKeywords);
+        }
+        metaKeywords.setAttribute('content', seo.keywords);
+
+        let canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (!canonicalLink) {
+          canonicalLink = document.createElement('link');
+          canonicalLink.setAttribute('rel', 'canonical');
+          document.head.appendChild(canonicalLink);
+        }
+        const canonicalUrl = seo.canonical || ('https://www.rainbowafs.com' + (currentPath === '/' ? '/' : currentPath));
+        canonicalLink.setAttribute('href', canonicalUrl);
+
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', seo.title);
+
+        let ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', seo.description);
+
+        let ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+        let twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', seo.title);
+
+        let twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', seo.description);
+      }
+    }
+
     if (typeof window !== 'undefined') {
       (window as any).dataLayer = (window as any).dataLayer || [];
       (window as any).dataLayer.push({
@@ -344,48 +392,6 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    let title = 'Rainbow Aquafresh Systems | RO Water Purifier Sales & Service Hyderabad';
-    let desc = 'Rainbow Aquafresh Systems provides RO water purifier sales, installation, repair, AMC and commercial RO plant solutions in Hyderabad. Call +91 8885556965.';
-    let path = '';
-    
-    if (activeSection === 'products') {
-      title = 'Domestic RO Water Purifiers | Rainbow Aquafresh Systems';
-      desc = 'Premium range of domestic RO water purifiers in Hyderabad. Check prices, specs, and request free demo for Rainbow Aquafresh, Dolphin, and AquaGrand.';
-      path = '#products';
-    } else if (activeSection === 'commercial') {
-      title = 'Commercial RO Plants in Hyderabad | Rainbow Aquafresh Systems';
-      desc = 'Commercial RO plants manufacturers in Hyderabad. High-performance industrial water purifiers for schools, hospitals, hostels, and factories starting at 25 LPH.';
-      path = '#commercial';
-    } else if (activeSection === 'services') {
-      title = 'RO Repair, Installation & AMC Services | Rainbow Aquafresh Systems';
-      desc = 'Professional RO repair services, same-day filter replacement, water purifier installation, and affordable AMC plans in Hyderabad. 24/7 fast support.';
-      path = '#services';
-    } else if (activeSection === 'faq') {
-      title = 'Frequently Asked Questions | Rainbow Aquafresh Systems';
-      desc = 'Expert answers regarding RO water purifier TDS index balancing, filter lifespan, repair costs, and maintenance warranty across Hyderabad.';
-      path = '#faq';
-    } else if (activeSection === 'contact') {
-      title = 'Contact Rainbow Aquafresh Systems | Hyderabad';
-      desc = 'Contact Rainbow Aquafresh Systems Hyderabad at +91 8885556965. Visit our Malakpet office for free water quality testing and professional RO repair.';
-      path = '#contact';
-    }
-
-    document.title = title;
-
-    // Update Meta Description
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', desc);
-    }
-
-    // Update Canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', 'https://www.rainbowafs.com/' + path);
-    }
-  }, [activeSection]);
-
   // Helper: Save Lead locally and drop success feedback
   const saveLeadToLocal = (leadData: Omit<Lead, 'id' | 'timestamp' | 'status'>) => {
     try {
@@ -591,11 +597,6 @@ export default function App() {
   return (
     <div className="bg-slate-50 min-h-screen text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
       
-      {/* Dynamic SEO Meta Tags Support */}
-      <title>Rainbow Aquafresh | #1 RO Service Hyderabad | Repair & Installation</title>
-      <meta name="description" content="Best RO Water Purifier Service in Hyderabad. Repair, Installation, AMC & Sales. 24/7 Support. Call +91 8885556965 for Fast Service." />
-      <meta name="keywords" content="RO Water Purifier Hyderabad, RO Service Hyderabad, RO Repair Near Me, Water Purifier Service Hyderabad, Commercial RO Plant Hyderabad, RO Installation Hyderabad, Rainbow Aquafresh Systems" />
-
       {/* Navigation Header */}
       <Header />
 

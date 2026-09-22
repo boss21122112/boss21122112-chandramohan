@@ -402,7 +402,8 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenBlog, onOpenA
                 { label: "RO Service Hyderabad", href: "/ro-service-hyderabad" },
                 { label: "RO Repair & Service", href: "/ro-repair-hyderabad" },
                 { label: "Filter Replacement", href: "/ro-filter-replacement-hyderabad" },
-                { label: "RO Service Kothapet", href: "/ro-water-purifier-service-kothapet-hyderabad" },
+                { label: "Water Guides & Blog", href: "/blog" },
+                { label: "Hyderabad Water Guide", href: "/water-guide" },
                 { label: "Contact Us", href: "/contact" }
               ].map((link, idx) => (
                 <li key={idx}>
@@ -500,12 +501,14 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenBlog, onOpenA
           <div>
             <h6 className="text-white font-bold mb-3 uppercase tracking-wider text-[10px] text-sky-400">Water Guides & Knowledge</h6>
             <ul className="space-y-1.5 text-slate-400">
+              <li><a href="/water-guide" className="hover:text-blue-400 transition-colors font-semibold text-blue-300">Complete Hyderabad Water Guide</a></li>
               <li><a href="/blog/ro-vs-uv-vs-uf-water-purifier-differences" className="hover:text-blue-400 transition-colors">RO vs UV vs UF Guide</a></li>
               <li><a href="/blog/best-water-purifier-for-hyderabad-water" className="hover:text-blue-400 transition-colors">Best Purifier for Hyderabad</a></li>
               <li><a href="/blog/how-often-should-ro-filters-be-changed" className="hover:text-blue-400 transition-colors">Filter Change Schedule</a></li>
               <li><a href="/blog/what-is-tds-in-drinking-water-hyderabad" className="hover:text-blue-400 transition-colors">Drinking Water TDS Guide</a></li>
               <li><a href="/blog/benefits-of-copper-alkaline-ro-water" className="hover:text-blue-400 transition-colors">Copper Alkaline Benefits</a></li>
               <li><a href="/blog/best-water-purifier-for-borewell-water" className="hover:text-blue-400 transition-colors">Borewell Water Solutions</a></li>
+              <li><a href="/blog" className="hover:text-blue-400 transition-colors font-semibold text-blue-300">Browse All 15 Articles &rarr;</a></li>
             </ul>
           </div>
         </div>
@@ -519,7 +522,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenBlog, onOpenA
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-mono">
             <span>SSL Secured</span>
             <span>•</span>
-            <button onClick={onOpenBlog} className="hover:text-slate-400 cursor-pointer bg-transparent border-none p-0">Blog</button>
+            <a href="/blog" className="hover:text-slate-400">Blog</a>
             <span>•</span>
             <button onClick={onOpenPrivacy} className="hover:text-slate-400 cursor-pointer bg-transparent border-none p-0 font-sans">Privacy Policy</button>
             <span>•</span>
