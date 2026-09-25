@@ -15,6 +15,9 @@ const PORT = 3000;
 async function startServer() {
   const app = express();
 
+  // Trust reverse proxy (Cloud Run, Google Cloud Load Balancer, Nginx) for accurate req.protocol, req.secure, and req.get('x-forwarded-proto')
+  app.enable("trust proxy");
+
   // Enable HTTP response compression (gzip/brotli) for reduced latency and fast response time
   app.use(compression());
 
@@ -43,13 +46,25 @@ async function startServer() {
     next();
   });
 
-  // 1. CRITICAL: 301 Permanent Redirect for non-www domain (rainbowafs.com -> www.rainbowafs.com) on EVERY route
+  // 1. CRITICAL: Canonical Domain & HTTPS enforcement (301 Permanent Redirect)
+  // Ensures non-www (rainbowafs.com) and plain HTTP permanently redirect directly to https://www.rainbowafs.com in a single hop with 0 redirect chains.
   app.use((req, res, next) => {
-    const host = (req.get("host") || "").toLowerCase();
-    if (host === "rainbowafs.com" || host.startsWith("rainbowafs.com:")) {
-      const targetUrl = `https://www.rainbowafs.com${req.originalUrl}`;
-      return res.redirect(301, targetUrl);
+    const host = (req.get("host") || "").toLowerCase().replace(/:\d+$/, "");
+    const forwardedProto = (req.get("x-forwarded-proto") || req.protocol || "").toLowerCase();
+    const isApex = host === "rainbowafs.com";
+    const isWww = host === "www.rainbowafs.com";
+    const isHttp = forwardedProto === "http" || !req.secure;
+
+    if (isApex) {
+      // Direct single 301 redirect from apex (whether HTTP or HTTPS) to canonical HTTPS WWW URL
+      return res.redirect(301, `https://www.rainbowafs.com${req.originalUrl}`);
     }
+
+    if (isWww && isHttp && process.env.NODE_ENV === "production") {
+      // Direct 301 redirect from plain HTTP WWW to HTTPS WWW
+      return res.redirect(301, `https://www.rainbowafs.com${req.originalUrl}`);
+    }
+
     next();
   });
 

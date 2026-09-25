@@ -24,32 +24,6 @@
     <!-- Canonical Link -->
     <link rel="canonical" href="https://www.rainbowafs.com/" />
     
-    <!-- Client-side HTTPS & WWW Canonical Redirect -->
-    <script>
-      (function() {
-        var host = window.location.hostname;
-        var proto = window.location.protocol;
-        var needsRedirect = false;
-        var targetUrl = window.location.href;
-
-        // Force HTTPS in production / hosted environments
-        if (proto === 'http:' && host !== 'localhost' && !host.startsWith('127.0.0.') && !host.startsWith('192.168.')) {
-          needsRedirect = true;
-          targetUrl = targetUrl.replace('http:', 'https:');
-        }
-
-        // Force WWW canonical subdomain for our official domain
-        if (host === 'rainbowafs.com') {
-          needsRedirect = true;
-          targetUrl = targetUrl.replace('rainbowafs.com', 'www.rainbowafs.com');
-        }
-
-        if (needsRedirect) {
-          window.location.replace(targetUrl);
-        }
-      })();
-    </script>
-    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Rainbow Aquafresh Systems | RO Service & Sales Hyderabad" />
     <meta property="og:description" content="Rainbow Aquafresh Systems provides RO water purifier sales, installation, repair, AMC and commercial RO plant solutions in Hyderabad. Call +91 8885556965." />
