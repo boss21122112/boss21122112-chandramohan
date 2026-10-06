@@ -145,6 +145,20 @@ export default function App() {
 
         let twDesc = document.querySelector('meta[name="twitter:description"]');
         if (twDesc) twDesc.setAttribute('content', seo.description);
+
+        // Inject or update route-specific Schema.org JSON-LD
+        let schemaTag = document.getElementById('route-schema-json');
+        if (seo.schemaJson) {
+          if (!schemaTag) {
+            schemaTag = document.createElement('script');
+            schemaTag.setAttribute('id', 'route-schema-json');
+            schemaTag.setAttribute('type', 'application/ld+json');
+            document.head.appendChild(schemaTag);
+          }
+          schemaTag.textContent = seo.schemaJson;
+        } else if (schemaTag) {
+          schemaTag.remove();
+        }
       }
     }
 

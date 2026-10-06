@@ -72,6 +72,11 @@ async function generateStaticPages() {
       html = html.replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${pageCanonical}" />`);
     }
 
+    // Inject Schema.org JSON-LD if provided
+    if (seo.schemaJson) {
+      html = html.replace('</head>', `  <script type="application/ld+json">\n${seo.schemaJson}\n  </script>\n</head>`);
+    }
+
     // Inject SSR Crawlable Content into root div
     if (seo.contentHtml) {
       const ssrWrapper = `<div id="root">${seo.contentHtml}</div>`;

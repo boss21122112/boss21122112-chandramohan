@@ -11,6 +11,13 @@ export interface ServiceDetailData {
   warranty: string;
   faqs: { question: string; answer: string }[];
   relatedServices: { name: string; slug: string }[];
+  overviewParagraphs?: string[];
+  serviceFeatures?: Array<{ title: string; desc: string }>;
+  troubleshootingGuide?: Array<{ problem: string; causes: string; solution: string }>;
+  brandsOrModels?: string[];
+  coverageAreas?: string[];
+  disclaimer?: string;
+  priceTable?: Array<{ item: string; price: string; description: string }>;
 }
 
 export const SPECIALIZED_SERVICES_DATA: Record<string, ServiceDetailData> = {
@@ -19,31 +26,70 @@ export const SPECIALIZED_SERVICES_DATA: Record<string, ServiceDetailData> = {
     title: "RO Membrane Replacement Service in Hyderabad",
     shortTitle: "RO Membrane Replacement",
     category: "component-repair",
-    badge: "100% Genuine USA Filmtec & Vontron",
-    description: "Reverse Osmosis (RO) membranes are the core purification engine that filters dissolved salts, heavy metals, arsenic, and chemicals at 0.0001 microns. We provide original 75 GPD, 80 GPD, and 100 GPD high-rejection TFC membranes for Hyderabad borewell water up to 2500 PPM TDS.",
+    badge: "100% Genuine USA Filmtec & Vontron (75 / 80 / 100 GPD)",
+    description: "Scientific RO membrane replacement service in Hyderabad for borewell and municipal water up to 2,500 PPM TDS. We test salt rejection, input/output TDS, and pump pressure before installing factory-sealed membranes with warranty.",
     symptoms: [
-      "Purified water tasting salty, hard, or bitter",
-      "Digital TDS meter showing output TDS above 200 PPM",
-      "Purified water trickling very slowly while wastewater drains rapidly",
-      "Membrane has been in continuous use for over 18-24 months"
+      "Purified water tasting salty, hard, bitter, or flat",
+      "Digital TDS meter showing pure water TDS above 150–200 PPM",
+      "Purified water trickling very slowly while reject wastewater drains continuously",
+      "RO membrane in continuous operation for over 18 to 36 months",
+      "High raw borewell water hardness (1,000–2,500 PPM) clogging membrane pores",
+      "Sudden drop in water purification speed with normal pump pressure"
     ],
     serviceInclusions: [
-      "Digital input & output TDS water audit",
-      "Removal and housing flush of old membrane",
-      "Installation of brand new 75/80/100 GPD TFC Membrane",
-      "New Flow Restrictor (FR 450/550) calibration to prevent backpressure",
-      "Post-carbon and mineral cartridge balance test"
+      "Digital raw water TDS vs purified water TDS salt rejection audit",
+      "Booster pump operational pressure test (80 to 120 PSI)",
+      "Membrane housing descaling, chemical sanitization & O-ring replacement",
+      "Installation of 100% genuine 75 GPD, 80 GPD, or 100 GPD TFC membrane",
+      "Flow restrictor (FR 450 / FR 550) calibration to prevent backpressure",
+      "Post-carbon, mineral cartridge balance and taste verification"
     ],
     pricingRange: "₹1,400 - ₹2,400 (Includes Membrane + Fitting)",
     warranty: "6 to 12 Months Replacement Warranty",
+    overviewParagraphs: [
+      "The Reverse Osmosis (RO) membrane is the biological and chemical purification heart of your water purifier. Operating at a microscopic porosity of 0.0001 microns (0.1 nanometers), the thin-film composite (TFC) polyamide sheet eliminates up to 99% of dissolved salts, toxic heavy metals (lead, arsenic, mercury, fluoride), industrial chemicals, micro-plastics, and pathogenic microorganisms.",
+      "In Greater Hyderabad, deep borewell groundwater in neighborhoods like Kukatpally, Gachibowli, Miyapur, LB Nagar, Dilsukhnagar, and Manikonda frequently exceeds 1,200 to 2,500 PPM TDS with severe calcium and magnesium hardness. Over 18 to 36 months of continuous operation, hard mineral scale, silica, and bio-foulants crystallize inside the tightly wound membrane spirals. This causes purified water output to reduce to an agonizing drip while wastewater drains non-stop into the sink.",
+      "Replacing your choked RO membrane restores the purifier to 95%+ factory purification efficiency at roughly 15% to 20% of the cost of buying a new machine. Rainbow Aquafresh Systems installs 100% genuine, factory-sealed 75 GPD, 80 GPD, and 100 GPD membranes (USA Dow Filmtec, Vontron, Toray) backed by digital TDS testing, booster pump pressure audits, and written warranties."
+    ],
+    serviceFeatures: [
+      { title: "Digital TDS Rejection Audit", desc: "We test input feed water TDS and purified water TDS with calibrated digital meters to calculate salt rejection percentage before and after membrane replacement." },
+      { title: "Booster Pump Pressure Verification", desc: "We ensure the 24V/36V booster pump produces 80 to 120 PSI operational pressure. Fitting a new membrane behind a weak pump causes premature fouling and poor filtration." },
+      { title: "Housing Descaling & O-Ring Renewal", desc: "We thoroughly descale the membrane vessel, flush accumulated biofilm, and fit food-grade silicone O-rings to ensure zero bypass and zero internal leakage." },
+      { title: "Calibrated Flow Restrictor (FR) Matching", desc: "Every membrane is matched with a calibrated capillary flow restrictor (FR 450 for 75 GPD; FR 550 for 80/100 GPD) to maintain optimum operating backpressure." },
+      { title: "Pre-Filter Carbon Protection", desc: "We inspect and replace sediment and activated carbon pre-filters to safeguard the delicate polyamide TFC membrane from chlorine oxidation and silt." },
+      { title: "Post-Mineral & Taste Balancing", desc: "We calibrate the post-carbon and alkaline mineral cartridge to deliver naturally sweet, mineral-balanced drinking water in the recommended 80–150 PPM zone." }
+    ],
+    troubleshootingGuide: [
+      { problem: "Purified water tastes salty, hard, or bitter", causes: "Membrane pores fouled by mineral scale or chlorine breakthrough tearing the polyamide layer", solution: "Install 75/80/100 GPD genuine high-rejection TFC membrane & replace pre-carbon filter" },
+      { problem: "TDS meter reading above 200–400 PPM in pure water", causes: "Salt rejection fallen below 80% due to aging or membrane housing O-ring bypass", solution: "Digital salt rejection test, housing inspection, new genuine membrane installation" },
+      { problem: "Water trickling into tank very slowly, reject water draining non-stop", causes: "Calcium scale and silica deposits severely choking microscopic membrane spiral pores", solution: "Pressure audit (80-120 PSI), chemical flush, and genuine high-flow membrane replacement" },
+      { problem: "No pure water output while pump runs normally", causes: "Complete membrane pore blockage or choked flow restrictor causing excessive backpressure", solution: "Replace choked membrane and install new matched Flow Restrictor (FR 450 / FR 550)" },
+      { problem: "Foul odor or chemical smell in pure water", causes: "Exhausted carbon pre-filter allowing chlorine to dissolve membrane polyamide sheets", solution: "Dual replacement of pre-carbon cartridge and genuine TFC membrane with sanitization" }
+    ],
+    priceTable: [
+      { item: "75 GPD Genuine TFC Membrane", price: "₹1,400 – ₹1,800", description: "Ideal for municipal and mixed water up to 1,200 PPM TDS. Includes doorstep fitting and digital TDS test." },
+      { item: "80 GPD High-Rejection Membrane", price: "₹1,600 – ₹2,000", description: "Optimized for Hyderabad borewell water up to 1,800 PPM TDS with 92%+ salt rejection." },
+      { item: "100 GPD Heavy-Duty Borewell Membrane", price: "₹1,900 – ₹2,400", description: "Heavy-duty commercial-grade sheet for severe hardness (up to 2,500 PPM TDS) and faster tank filling." },
+      { item: "Membrane + Full Filter Service Kit", price: "₹2,400 – ₹3,200", description: "Includes genuine membrane, spun sediment, pre-carbon, post-carbon, flow restrictor, and full sanitization." }
+    ],
+    coverageAreas: [
+      "Malakpet", "Dilsukhnagar", "LB Nagar", "Kothapet", "Kukatpally", "Gachibowli", "Miyapur",
+      "Madhapur", "Kondapur", "Hitech City", "Secunderabad", "Uppal", "Banjara Hills", "Jubilee Hills"
+    ],
     faqs: [
-      { question: "How do I know if my RO membrane is damaged?", answer: "If your purified water TDS exceeds 150-200 PPM when input is high, or water output reduces to a slow drip despite good pump pressure, the membrane pores are scaled and need replacement." },
-      { question: "Which membrane capacity do I need for borewell water?", answer: "For groundwater between 1200 and 2500 PPM in Hyderabad, we recommend an 80 GPD or 100 GPD high-rejection TFC membrane with an FR 550 flow restrictor." }
+      { question: "How do I know if my RO membrane is failing?", answer: "The most reliable indicator is water TDS: if your pure water TDS climbs above 150–200 PPM (or salt rejection falls below 85–90%), or water output reduces to a slow drip while reject water flows normally, the membrane is choked with scale or breached." },
+      { question: "Should I replace the membrane or buy a new water purifier?", answer: "In almost all cases, replacing the membrane restores your water purifier to 95%+ factory purification efficiency at a fraction of the ₹12,000–₹20,000 cost of a new machine. Purifiers with intact bodies and good booster pumps work like brand new after membrane replacement." },
+      { question: "How long does an RO membrane last in Hyderabad?", answer: "Membrane lifespan typically ranges between 18 and 36 months in Hyderabad. Longevity depends on your input water TDS (e.g. 400 PPM municipal water vs 2,000 PPM borewell water), daily consumption volume, and crucially, whether pre-filters are replaced every 3 to 6 months to prevent chlorine and silt fouling." },
+      { question: "Which membrane capacity (GPD) should I choose?", answer: "Standard domestic units use 75 GPD (gallons per day) or 80 GPD membranes for input TDS up to 1,500 PPM. For heavy borewell water above 1,500 PPM or larger families, we install 100 GPD high-rejection membranes paired with an FR 550 flow restrictor." },
+      { question: "Do you provide commercial RO membrane replacement?", answer: "Yes, we replace 4040 (250 LPH) and 8040 (1,000+ LPH) industrial membranes for commercial RO plants in schools, hospitals, hotels, and apartment complexes across Hyderabad." },
+      { question: "Why is it recommended to replace pre-filters alongside the membrane?", answer: "Sediment and carbon pre-filters protect the delicate polyamide thin-film composite (TFC) membrane from dirt particles and chlorine. Installing a new membrane behind choked pre-filters drastically shortens its lifespan." }
     ],
     relatedServices: [
-      { name: "Booster Pump Repair", slug: "/ro-booster-pump-repair-replacement-hyderabad" },
+      { name: "RO Repair Service", slug: "/ro-repair-hyderabad" },
       { name: "Filter Replacement", slug: "/ro-filter-replacement-hyderabad" },
-      { name: "TDS Adjustment", slug: "/ro-tds-adjustment-controller-service-hyderabad" }
+      { name: "RO AMC Plans", slug: "/ro-amc-service" },
+      { name: "Kent RO Service", slug: "/kent-ro-service-repair-hyderabad" },
+      { name: "Commercial RO Plants", slug: "/commercial-ro-plants" }
     ]
   },
   "ro-booster-pump": {
@@ -318,28 +364,81 @@ export const SPECIALIZED_SERVICES_DATA: Record<string, ServiceDetailData> = {
     title: "Kent RO Service & Repair in Hyderabad",
     shortTitle: "Kent RO Service",
     category: "brand-service",
-    badge: "Certified Kent Spares & Rapid Support",
-    description: "Specialized service and repair for all Kent models including Kent Grand+, Kent Prime, Kent Pearl, Kent Sterling, Kent Maxx, and Kent Supreme. We provide genuine Kent filter kits, high-rejection membranes, UV fail alarms, and PCB repairs.",
+    badge: "Independent Multi-Brand Specialists | Genuine Compatible Spares",
+    description: "Independent specialized service and out-of-warranty repair for all Kent RO models across Hyderabad. We resolve UV fail beeping alarms, filter change alarms, slow water flow, booster pump vibration, PCB faults, and membrane scaling with genuine parts.",
     symptoms: [
-      "Kent RO beeping continuously (UV Fail / Filter Change Alarm)",
-      "Kent Grand+ water filling very slowly into storage tank",
-      "Kent booster pump making loud vibrating noise",
-      "Water leaking from push-fit fittings inside the cabinet"
+      "Kent RO beeping continuously (2 beeps = UV fail alarm; 4 beeps = filter change alarm)",
+      "Water filling very slowly into storage tank or stopping completely",
+      "Kent booster pump vibrating loudly or leaking from pump head",
+      "Purified water tasting strange, bitter, or high output TDS",
+      "Water leaking from push-fit internal elbows or auto-shut-off valve",
+      "Electrical power failure (no LED indicator light / faulty SMPS adapter)"
     ],
     serviceInclusions: [
-      "Kent filter life alarm reset and PCB diagnostic",
-      "Original Kent sediment, carbon, and RO membrane replacement",
-      "Kent UV chamber and germicidal lamp testing",
-      "Digital TDS controller calibration for sweet taste"
+      "Kent filter change alarm reset and PCB electronic diagnostic",
+      "Genuine Kent sediment filter, activated carbon, and post-carbon replacement",
+      "High-rejection 75/80/100 GPD RO membrane installation with TDS testing",
+      "UV chamber diagnostic, quartz jacket cleaning & UV lamp replacement",
+      "Booster pump pressure test (60–100 PSI) and leak-free elbow replacement",
+      "Digital TDS controller calibration for optimum taste and healthy minerals"
     ],
-    pricingRange: "₹299 Service | Genuine Spares at Transparent Rates",
+    pricingRange: "₹299 Inspection Fee (Waived on Repair) | Transparent Spare Rates",
     warranty: "6 to 12 Months Warranty on Parts",
+    disclaimer: "Independent Service Provider Notice: Rainbow Aquafresh Systems is an independent multi-brand water purifier sales and service provider. We are not an authorized franchisee or official service center of Kent RO Systems Ltd. All product names, logos, and trademarks (such as 'Kent') are the property of their respective owners and are used here solely for descriptive and identification purposes.",
+    overviewParagraphs: [
+      "Rainbow Aquafresh Systems provides specialized, independent doorstep repair, scheduled servicing, and genuine spare replacement for all Kent RO domestic and commercial water purifiers across Greater Hyderabad. With more than two decades of dedicated water engineering experience, our technicians understand the unique micro-controller electronics, booster pump tolerances, and multi-stage mineral RO configurations inside Kent systems.",
+      "Kent water purifiers are equipped with micro-controller PCBs designed to alert users through audio-visual beeps. Continuous 2 beeps indicate a UV fail alarm (UV lamp or ballast failure), while 4 beeps indicate a filter change alarm triggered by the programmed operational timer. Our technicians carry specialized PCB diagnostic tools to identify electronic versus physical faults, replace exhausted filters, and reset alarm timers correctly.",
+      "Whether your Kent purifier is vibrating loudly, leaking from push-fit internal elbows, failing to power on, delivering slow water flow, or producing water with high TDS or unpleasant taste, our mobile service units reach your home within 60 to 90 minutes. We provide upfront, transparent quotations before starting any work."
+    ],
+    brandsOrModels: [
+      "Kent Grand+", "Kent Grand Star", "Kent Prime+", "Kent Prime TC", "Kent Pearl", "Kent Pearl Star",
+      "Kent Supreme", "Kent Supreme Extra", "Kent Sterling+", "Kent Maxx", "Kent Elegant", "Kent Pride",
+      "Kent Wonder", "Kent Mineral RO", "Kent Superb", "Kent Under-Sink RO"
+    ],
+    serviceFeatures: [
+      { title: "UV & Filter Alarm PCB Reset", desc: "Accurate electronic diagnostic for 2-beep (UV lamp failure) and 4-beep (filter life exhaustion) alarms with proper reset sequence." },
+      { title: "Genuine Compatible Filter Replacement", desc: "Factory-sealed inline sediment filters, granular activated carbon, and post-carbon taste enhancers designed for Kent filter chambers." },
+      { title: "High-Rejection Membrane Installation", desc: "Genuine 75 GPD and 100 GPD TFC RO membranes with up to 95% salt rejection for Hyderabad borewell and municipal supplies." },
+      { title: "Booster Pump Pressure & Leak Repair", desc: "High-pressure pump diagnostics (70–110 PSI), pump head diaphragm replacement, and elimination of vibration noise." },
+      { title: "TDS Controller Valve Calibration", desc: "Precision calibration of the patented Kent Mineral RO TDS controller valve to keep pure water TDS in the healthy 80–150 PPM zone." },
+      { title: "Doorstep 60–90 Min Dispatch", desc: "Technicians deployed throughout East, West, North, and South Hyderabad carrying all required spares and test meters." }
+    ],
+    troubleshootingGuide: [
+      { problem: "Kent RO beeping 2 times continuously", causes: "UV fail alarm: UV germicidal tube blown, quartz sleeve fouled, or UV ballast SMPS circuit damaged", solution: "Test ballast output voltage, replace 11W UV lamp, clean quartz glass sleeve, and reset PCB" },
+      { problem: "Kent RO beeping 4 times continuously", causes: "Filter change alarm: micro-controller operational timer reached 600 hours of continuous purification", solution: "Inspect and replace choked inline sediment and carbon cartridges, perform PCB sensor reset" },
+      { problem: "Water flowing very slowly into storage tank", causes: "Choked sediment pre-filter, scaled RO membrane, or booster pump operating below 60 PSI", solution: "Digital pressure audit, replace clogged filters or membrane, calibrate flow restrictor" },
+      { problem: "Purified water tasting strange, bitter, or flat", causes: "TDS controller set too low (stripping minerals) or post-carbon cartridge exhausted", solution: "Calibrate TDS controller valve with digital TDS meter to 80–150 PPM, replace post-carbon" },
+      { problem: "Kent booster pump vibrating loudly or leaking", causes: "Worn pump head diaphragm, loose motor mounting grommets, or dry-run cavitation", solution: "Replace pump head diaphragm seal, tighten anti-vibration rubber mounts, test inlet solenoid" },
+      { problem: "Water leaking inside Kent body / base", causes: "Cracked push-fit quick-connect elbow, loose auto-cutoff valve, or damaged tubing", solution: "Pressure leak check, replace faulty push-fit fittings with food-grade locking clips" }
+    ],
+    priceTable: [
+      { item: "Doorstep Inspection & Diagnostic", price: "₹299 (Waived on Repair)", description: "Full electronic and water flow diagnostic, TDS audit, and upfront repair quote." },
+      { item: "Kent Filter Change Kit (Sediment + Pre-Carbon)", price: "₹750 – ₹1,100", description: "Genuine compatible inline filters + pre-filter candle + PCB alarm reset." },
+      { item: "Genuine Kent RO Membrane Replacement", price: "₹1,400 – ₹2,200", description: "75/80/100 GPD high-rejection TFC membrane with housing chemical sanitization." },
+      { item: "Kent UV Lamp & Ballast Replacement", price: "₹650 – ₹1,200", description: "11W Phillips/Osram germicidal UV tube + electronic ballast with UV alarm reset." },
+      { item: "Booster Pump Repair / Replacement", price: "₹1,200 – ₹2,200", description: "Heavy-duty 24V copper booster pump replacement or diaphragm repair with 1-year warranty." },
+      { item: "Kent Annual Maintenance Contract (AMC)", price: "₹1,999 – ₹2,999/yr", description: "Includes 3-4 visits, free filter changes, free membrane (Gold), and zero repair charges." }
+    ],
+    coverageAreas: [
+      "Malakpet", "Dilsukhnagar", "LB Nagar", "Kothapet", "Kukatpally", "Gachibowli", "Miyapur",
+      "Madhapur", "Kondapur", "Hitech City", "Secunderabad", "Uppal", "Banjara Hills", "Jubilee Hills",
+      "Begumpet", "Tarnaka", "Mehdipatnam"
+    ],
     faqs: [
-      { question: "Why is my Kent RO beeping continuously?", answer: "Kent purifiers beep for two reasons: 2 beeps indicate the UV lamp has burned out, and 4 beeps indicate the filter life timer has expired. We reset the sensor and replace components on-site." }
+      { question: "Why is my Kent RO purifier beeping continuously?", answer: "Kent purifiers have built-in micro-controller alarms: 2 short beeps indicate a UV lamp failure or faulty UV ballast; 4 short beeps indicate the filter life timer has reached its programmed limit. Our technicians diagnose the root cause, replace the failing component, and reset the PCB alarm sensor." },
+      { question: "Are you an authorized Kent service center?", answer: "Rainbow Aquafresh Systems is an independent multi-brand water purification sales and service provider. We are not an authorized franchise of Kent RO Systems Ltd. We specialize in post-warranty doorstep servicing, transparent pricing, and genuine compatible spare parts across Hyderabad." },
+      { question: "Which Kent RO models do you service in Hyderabad?", answer: "We service all domestic Kent models including Kent Grand+, Kent Prime, Kent Pearl, Kent Sterling, Kent Maxx, Kent Supreme, Kent Elegant, Kent Pride, Kent Mineral RO, and Kent under-sink models." },
+      { question: "How quickly can a technician visit my home in Hyderabad?", answer: "Our field technicians are located across East, West, North, and South Hyderabad, reaching your doorstep within 60 to 90 minutes of booking." },
+      { question: "Can you calibrate the TDS controller on Kent purifiers?", answer: "Yes, Kent Mineral RO purifiers feature an adjustable TDS controller valve. We use calibrated digital TDS meters to adjust the pure water TDS to the recommended 80–150 PPM range for balanced mineral content and pleasant taste." },
+      { question: "Do you offer Annual Maintenance Contracts (AMC) for Kent RO?", answer: "Yes, we offer comprehensive and basic annual maintenance contracts for Kent purifiers starting from ₹1,999/year, covering periodic filter changes, free breakdown visits, and membrane replacement." }
     ],
     relatedServices: [
+      { name: "RO Repair Service", slug: "/ro-repair-hyderabad" },
+      { name: "Membrane Replacement", slug: "/ro-membrane-replacement-service-hyderabad" },
+      { name: "Filter Replacement", slug: "/ro-filter-replacement-hyderabad" },
+      { name: "RO AMC Plans", slug: "/ro-amc-service" },
       { name: "Aquaguard Service", slug: "/aquaguard-ro-service-repair-hyderabad" },
-      { name: "RO Membrane Replacement", slug: "/ro-membrane-replacement-service-hyderabad" }
+      { name: "RO Installation", slug: "/ro-installation-hyderabad" }
     ]
   },
   "aquaguard-ro-service": {

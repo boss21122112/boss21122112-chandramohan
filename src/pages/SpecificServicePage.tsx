@@ -75,8 +75,18 @@ export const SpecificServicePage: React.FC<SpecificServicePageProps> = ({ servic
         </div>
       </div>
 
+      {/* Disclaimer Banner if present */}
+      {srv.disclaimer && (
+        <div className="bg-amber-50 border-b border-amber-200 py-3 px-4 text-xs text-amber-900">
+          <div className="max-w-7xl mx-auto flex items-start gap-2.5">
+            <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+            <p className="leading-relaxed">{srv.disclaimer}</p>
+          </div>
+        </div>
+      )}
+
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white py-16 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white py-16 lg:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -164,6 +174,54 @@ export const SpecificServicePage: React.FC<SpecificServicePageProps> = ({ servic
         </div>
       </section>
 
+      {/* Overview Paragraphs Section */}
+      {srv.overviewParagraphs && srv.overviewParagraphs.length > 0 && (
+        <section className="py-14 bg-white border-b border-slate-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                Technical Insights
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3">
+                Expert Understanding of {srv.shortTitle}
+              </h2>
+            </div>
+            <div className="space-y-5 text-slate-600 leading-relaxed text-sm sm:text-base">
+              {srv.overviewParagraphs.map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Service Features Grid */}
+      {srv.serviceFeatures && srv.serviceFeatures.length > 0 && (
+        <section className="py-14 bg-slate-50 border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                Service Protocol
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3">
+                Key Technical Inclusions in Every Visit
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {srv.serviceFeatures.map((feat, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-3">
+                    <CheckCircle className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{feat.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">{feat.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Warning Symptoms Section */}
       <section className="py-14 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +234,7 @@ export const SpecificServicePage: React.FC<SpecificServicePageProps> = ({ servic
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {srv.symptoms.map((symptom, idx) => (
               <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-200/70 hover:border-amber-300 transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-4">
@@ -189,6 +247,121 @@ export const SpecificServicePage: React.FC<SpecificServicePageProps> = ({ servic
           </div>
         </div>
       </section>
+
+      {/* Troubleshooting Table */}
+      {srv.troubleshootingGuide && srv.troubleshootingGuide.length > 0 && (
+        <section className="py-14 bg-slate-50 border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                Diagnostic Matrix
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3">
+                Root Cause Analysis & Corrective Action
+              </h2>
+            </div>
+            <div className="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="p-4 font-bold border-b border-slate-800">Symptom / Problem</th>
+                    <th className="p-4 font-bold border-b border-slate-800">Probable Root Cause</th>
+                    <th className="p-4 font-bold border-b border-slate-800">Rainbow Aquafresh Solution</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-slate-700">
+                  {srv.troubleshootingGuide.map((item, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50/60"}>
+                      <td className="p-4 font-bold text-slate-900">{item.problem}</td>
+                      <td className="p-4 text-slate-600">{item.causes}</td>
+                      <td className="p-4 text-blue-700 font-semibold">{item.solution}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Price Table */}
+      {srv.priceTable && srv.priceTable.length > 0 && (
+        <section className="py-14 bg-white border-b border-slate-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+                Transparent Pricing
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-3">
+                Standard Rates for Parts & Servicing
+              </h2>
+              <p className="text-xs text-slate-500 mt-2">No hidden visiting fees. 100% upfront quotes before starting work.</p>
+            </div>
+            <div className="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="p-4 font-bold border-b border-slate-800">Service / Component</th>
+                    <th className="p-4 font-bold border-b border-slate-800">Estimated Price</th>
+                    <th className="p-4 font-bold border-b border-slate-800">Inclusions & Scope</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-slate-700">
+                  {srv.priceTable.map((item, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50/60"}>
+                      <td className="p-4 font-bold text-slate-900">{item.item}</td>
+                      <td className="p-4 font-extrabold text-emerald-600">{item.price}</td>
+                      <td className="p-4 text-slate-600">{item.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Models Covered */}
+      {srv.brandsOrModels && srv.brandsOrModels.length > 0 && (
+        <section className="py-12 bg-slate-50 border-b border-slate-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <h2 className="text-2xl font-bold text-slate-900">
+                Models & Series Serviced
+              </h2>
+              <p className="text-xs text-slate-500 mt-1">Our technicians carry factory-compatible components for all models:</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2.5">
+              {srv.brandsOrModels.map((model, idx) => (
+                <span key={idx} className="bg-white border border-slate-200 text-slate-800 font-semibold text-xs px-3.5 py-1.5 rounded-lg shadow-2xs">
+                  {model}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Coverage Areas */}
+      {srv.coverageAreas && srv.coverageAreas.length > 0 && (
+        <section className="py-12 bg-white border-b border-slate-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                Doorstep Service Coverage in Hyderabad
+              </h2>
+              <p className="text-xs text-slate-500 mt-1">60 to 90-minute mobile dispatch to your doorstep:</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {srv.coverageAreas.map((area, idx) => (
+                <span key={idx} className="bg-blue-50 text-blue-700 font-medium text-xs px-3 py-1 rounded-md border border-blue-100">
+                  {area}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       <section className="py-14 bg-slate-50">

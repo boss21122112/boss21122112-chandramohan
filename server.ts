@@ -46,6 +46,38 @@ async function startServer() {
     next();
   });
 
+  // 301 Redirects for legacy .php URLs
+  const phpRedirects: Record<string, string> = {
+    "/index.php": "/",
+    "/about.php": "/about",
+    "/contact.php": "/contact",
+    "/products.php": "/products/",
+    "/ro-service.php": "/ro-service-hyderabad",
+    "/ro-service-hyderabad.php": "/ro-service-hyderabad",
+    "/ro-installation.php": "/ro-installation-hyderabad",
+    "/ro-installation-hyderabad.php": "/ro-installation-hyderabad",
+    "/ro-repair.php": "/ro-repair-hyderabad",
+    "/ro-repair-hyderabad.php": "/ro-repair-hyderabad",
+    "/amc.php": "/ro-amc-service",
+    "/ro-amc-service.php": "/ro-amc-service",
+    "/commercial.php": "/commercial-ro-plants",
+    "/commercial-ro-plants.php": "/commercial-ro-plants",
+    "/filter-replacement.php": "/ro-filter-replacement-hyderabad"
+  };
+
+  // Helper to normalize target pathname to canonical form (lowercase, trim trailing slashes except /products/, map .php)
+  function getCanonicalTargetPath(rawPath: string): string {
+    let target = rawPath.toLowerCase();
+    if (phpRedirects[target]) {
+      target = phpRedirects[target];
+    } else if (target === "/products") {
+      target = "/products/";
+    } else if (target.length > 1 && target.endsWith("/") && target !== "/products/") {
+      target = target.slice(0, -1);
+    }
+    return target;
+  }
+
   // 1. CRITICAL: Canonical Domain & HTTPS enforcement (301 Permanent Redirect)
   // Ensures non-www (rainbowafs.com) and plain HTTP permanently redirect directly to https://www.rainbowafs.com in a single hop with 0 redirect chains.
   app.use((req, res, next) => {
@@ -56,13 +88,19 @@ async function startServer() {
     const isHttp = forwardedProto === "http" || !req.secure;
 
     if (isApex) {
-      // Direct single 301 redirect from apex (whether HTTP or HTTPS) to canonical HTTPS WWW URL
-      return res.redirect(301, `https://www.rainbowafs.com${req.originalUrl}`);
+      // Direct single 301 redirect from apex (whether HTTP or HTTPS) to normalized canonical HTTPS WWW URL
+      const cleanPath = getCanonicalTargetPath(req.path);
+      const queryIndex = req.originalUrl.indexOf("?");
+      const queryString = queryIndex !== -1 ? req.originalUrl.slice(queryIndex) : "";
+      return res.redirect(301, `https://www.rainbowafs.com${cleanPath}${queryString}`);
     }
 
     if (isWww && isHttp && process.env.NODE_ENV === "production") {
       // Direct 301 redirect from plain HTTP WWW to HTTPS WWW
-      return res.redirect(301, `https://www.rainbowafs.com${req.originalUrl}`);
+      const cleanPath = getCanonicalTargetPath(req.path);
+      const queryIndex = req.originalUrl.indexOf("?");
+      const queryString = queryIndex !== -1 ? req.originalUrl.slice(queryIndex) : "";
+      return res.redirect(301, `https://www.rainbowafs.com${cleanPath}${queryString}`);
     }
 
     next();
@@ -286,6 +324,10 @@ async function startServer() {
         .replace(/<meta name="twitter:title" content=".*?" \/>/s, `<meta name="twitter:title" content="${seo.title}" />`)
         .replace(/<meta name="twitter:description" content=".*?" \/>/s, `<meta name="twitter:description" content="${seo.description}" />`);
 
+      if (seo.schemaJson) {
+        html = html.replace('</head>', `  <script type="application/ld+json">\n${seo.schemaJson}\n  </script>\n</head>`);
+      }
+
       html = html.replace(/<div id="root">.*?<\/div>/s, `<div id="root">${seo.contentHtml}</div>`);
 
       res.status(statusCode).set({
@@ -348,25 +390,7 @@ async function startServer() {
     }
   }
 
-  // 301 Redirects for legacy .php URLs
-  const phpRedirects: Record<string, string> = {
-    "/index.php": "/",
-    "/about.php": "/about",
-    "/contact.php": "/contact",
-    "/products.php": "/products/",
-    "/ro-service.php": "/ro-service-hyderabad",
-    "/ro-service-hyderabad.php": "/ro-service-hyderabad",
-    "/ro-installation.php": "/ro-installation-hyderabad",
-    "/ro-installation-hyderabad.php": "/ro-installation-hyderabad",
-    "/ro-repair.php": "/ro-repair-hyderabad",
-    "/ro-repair-hyderabad.php": "/ro-repair-hyderabad",
-    "/amc.php": "/ro-amc-service",
-    "/ro-amc-service.php": "/ro-amc-service",
-    "/commercial.php": "/commercial-ro-plants",
-    "/commercial-ro-plants.php": "/commercial-ro-plants",
-    "/filter-replacement.php": "/ro-filter-replacement-hyderabad"
-  };
-
+  // Register 301 route handlers for legacy .php URLs
   Object.entries(phpRedirects).forEach(([oldPhpPath, newRoute]) => {
     app.get(oldPhpPath, (req, res) => {
       res.redirect(301, newRoute);

@@ -10,6 +10,7 @@ export interface RouteSEO {
   canonical: string;
   h1: string;
   contentHtml: string;
+  schemaJson?: string;
 }
 
 const COMMON_HEADER = `
@@ -336,74 +337,373 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/ro-amc-service": {
-    title: "RO AMC Service Hyderabad | Annual Maintenance Plans ₹1999",
-    description: "Annual Maintenance Contracts (AMC) for RO water purifiers in Hyderabad. Full coverage, free filter replacement, fast repairs. Call +91 8885556965.",
-    keywords: "RO AMC Hyderabad, RO Annual Maintenance Contract Hyderabad, Water Purifier AMC Hyderabad, RO Maintenance Plan",
+    title: "RO AMC Service in Hyderabad | Rainbow Aquafresh Systems",
+    description: "Comprehensive RO AMC service in Hyderabad from ₹1,999/yr. Includes scheduled visits, free filter & membrane replacement, and zero repair charges. Call +91 8885556965.",
+    keywords: "RO AMC service Hyderabad, RO annual maintenance contract Hyderabad, water purifier AMC Hyderabad, RO maintenance service Hyderabad, domestic RO AMC, commercial RO AMC",
     canonical: "https://www.rainbowafs.com/ro-amc-service",
-    h1: "Annual Maintenance Contract (AMC) for RO Purifiers",
+    h1: "RO AMC Service & Annual Maintenance Contracts in Hyderabad",
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.rainbowafs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "RO Services",
+            "item": "https://www.rainbowafs.com/ro-service-hyderabad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RO AMC Service",
+            "item": "https://www.rainbowafs.com/ro-amc-service"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "RO AMC Service in Hyderabad",
+        "serviceType": "Water Purifier Annual Maintenance Contract",
+        "description": "Comprehensive Annual Maintenance Contracts (AMC) for domestic RO purifiers and commercial RO plants across Hyderabad. Covers preventive maintenance checkups, free consumable filter replacements, genuine membrane protection, and unlimited zero-charge emergency repairs.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Rainbow Aquafresh Systems",
+          "telephone": "+918885556965",
+          "url": "https://www.rainbowafs.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500036",
+            "addressCountry": "IN"
+          }
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Hyderabad" },
+          { "@type": "City", "name": "Secunderabad" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "RO AMC Plans",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Silver Essential AMC",
+              "price": "1999",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Gold Comprehensive AMC",
+              "price": "2999",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Platinum VIP Total Care AMC",
+              "price": "4499",
+              "priceCurrency": "INR"
+            }
+          ]
+        },
+        "url": "https://www.rainbowafs.com/ro-amc-service"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between Comprehensive AMC and Basic AMC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our Basic (Silver) AMC covers routine scheduled maintenance visits, free sediment/carbon filter replacements, and zero-charge breakdown calls. Our Comprehensive (Gold & Platinum) AMC additionally includes free replacement of the expensive Reverse Osmosis (RO) membrane and electrical components like the booster pump and 24V SMPS power adapter if they malfunction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does your AMC cover non-Rainbow purifiers like Kent, Aquaguard, Pureit, and Livpure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Rainbow Aquafresh Systems provides annual maintenance contracts for all major domestic water purifier brands in Hyderabad, including Kent, Eureka Forbes Aquaguard, Pureit, Livpure, AO Smith, Havells, Blue Star, and custom assembled RO systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often will a technician visit for scheduled preventive maintenance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under our AMC contracts, our service team proactively schedules 3 to 4 periodic maintenance visits per year (every 90 to 120 days). During each visit, our technician inspects filters, measures input and output TDS, sanitizes the water storage tank, and tests operating pump pressure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the RO membrane really replaced free under Gold and Platinum plans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If your water purifier's output TDS increases or the flow drops due to scaling during the contract period, we install a 100% brand-new, genuine high-rejection TFC membrane with zero charges for parts or labor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if my water purifier breaks down between scheduled service visits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AMC members receive unlimited emergency breakdown visits. When you call or WhatsApp our helpline, a certified technician is dispatched to your doorstep within 60 to 90 minutes anywhere in Greater Hyderabad with zero visiting or labor charges."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide Commercial RO Plant AMC in Hyderabad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer customized commercial RO plant AMC contracts for residential gated communities, hospitals, schools, corporate offices, and restaurants with plant capacities from 50 LPH to 2,000 LPH, covering high-pressure pumps, multi-port valves, media vessels, and industrial 4040/8040 membranes."
+            }
+          }
+        ]
+      }
+    ]),
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
-        <section style="margin-bottom: 40px;">
-          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">Annual Maintenance Contract (AMC) for RO Purifiers</h1>
-          <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
-            Protect your drinking water quality and eliminate unexpected repair bills with Rainbow Aquafresh Systems' Annual Maintenance Contracts (AMC). Our comprehensive plans start at just ₹1,999/year and include scheduled filter replacements, regular sanitization visits, and unlimited zero-charge breakdown repairs across all Hyderabad localities.
-          </p>
-          <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
-            Hard borewell water in Hyderabad causes rapid mineral scaling on RO membranes and chokes sediment pre-filters every 3 to 6 months. An active AMC ensures your water purifier operates at maximum efficiency, extends equipment lifespan, and guarantees safe drinking water 365 days a year for your entire family.
-          </p>
-        </section>
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/ro-service-hyderabad" style="color: #2563eb; text-decoration: none;">Services</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">RO AMC Service</span>
+        </nav>
 
         <section style="margin-bottom: 40px;">
-          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Our RO AMC Plan Options</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 24px;">
-            <div style="border: 2px solid #e2e8f0; padding: 24px; border-radius: 10px; background: #ffffff;">
-              <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">Essential Care AMC</h3>
-              <p style="font-size: 24px; font-weight: 800; color: #2563eb; margin-bottom: 12px;">₹1,999 <span style="font-size: 14px; font-weight: 400; color: #64748b;">/ Year</span></p>
-              <ul style="list-style-type: check; padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
-                <li>3 Scheduled Preventive Maintenance Visits</li>
-                <li>Free Spun Pre-Filter Replacements (2 Nos)</li>
-                <li>Free Sediment & Carbon Filter Replacement (1 Set)</li>
-                <li>Unlimited Emergency Breakdown Visits</li>
-                <li>Tank Cleaning & Digital TDS Check</li>
+          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">RO AMC Service & Annual Maintenance Contracts in Hyderabad</h1>
+          <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
+            Enjoy 365 days of uninterrupted, mineral-balanced, pure drinking water with Rainbow Aquafresh Systems' comprehensive <strong>RO AMC Service in Hyderabad</strong>. Starting at just ₹1,999/year, our annual maintenance plans protect your family from waterborne contaminants and shield your wallet from unexpected repair expenses.
+          </p>
+          <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
+            In Greater Hyderabad, deep borewell groundwater frequently carries elevated Total Dissolved Solids (TDS) exceeding 1,200 to 2,500 PPM alongside severe calcium and magnesium hardness. Without structured preventative maintenance, scale chokes delicate RO membranes, pre-filters clog within months, and booster pumps burn out under backpressure. Our AMC packages guarantee scheduled filter changes, proactive chemical descaling, and priority emergency technician response.
+          </p>
+          <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <p style="margin: 0 0 8px 0; font-weight: 700; color: #1e40af; font-size: 16px;">
+              Direct Doorstep AMC Enrollment & Inquiries: <a href="tel:+918885556965" style="color: #1d4ed8; text-decoration: underline;">+91 8885556965</a> | Alternate Support: <a href="tel:+918341256965" style="color: #1d4ed8; text-decoration: underline;">+91 8341256965</a>
+            </p>
+            <p style="margin: 0; font-size: 14px; color: #1e3a8a;">
+              Instant Booking via WhatsApp: <a href="https://wa.me/918885556965?text=Hello%20Rainbow%20Aquafresh,%20I%20am%20interested%20in%20an%20RO%20AMC%20Plan%20in%20Hyderabad" style="color: #16a34a; font-weight: bold; text-decoration: underline;">Chat with our AMC Manager</a> (60 to 90 min response across Hyderabad)
+            </p>
+          </div>
+        </section>
+
+        <!-- Domestic RO AMC Plans -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Domestic Water Purifier AMC Packages</h2>
+          <p style="color: #475569; margin-bottom: 20px;">
+            Choose from three transparent maintenance tiers designed for municipal tap water, tanker supply, or deep borewell water sources:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 24px;">
+            <div style="border: 2px solid #e2e8f0; padding: 28px; border-radius: 12px; background: #ffffff;">
+              <span style="background: #f1f5f9; color: #475569; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Essential Plan</span>
+              <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 12px; margin-bottom: 6px;">Silver Care AMC</h3>
+              <p style="font-size: 28px; font-weight: 800; color: #2563eb; margin-bottom: 12px;">₹1,999 <span style="font-size: 14px; font-weight: 400; color: #64748b;">/ Year</span></p>
+              <p style="font-size: 13px; color: #64748b; margin-bottom: 16px;">Recommended for municipal water with low to moderate TDS levels (&lt;800 PPM).</p>
+              <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
+                <li>3 Scheduled Preventive Maintenance Visits (every 120 days)</li>
+                <li>Free Spun Polypropylene Sediment Pre-Filters (2 Sets)</li>
+                <li>Free Granular Activated Carbon (GAC) Filter Replacement (1 Set)</li>
+                <li>Unlimited Emergency Breakdown Service Calls</li>
+                <li>Zero Labor & Zero Visiting Charges on all calls</li>
+                <li>Digital TDS Testing & Storage Tank Chemical Sanitization</li>
               </ul>
             </div>
-            <div style="border: 2px solid #2563eb; padding: 24px; border-radius: 10px; background: #eff6ff; position: relative;">
-              <div style="position: absolute; top: -12px; right: 20px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Most Popular</div>
-              <h3 style="font-size: 20px; font-weight: 800; color: #1e3a8a; margin-bottom: 6px;">Comprehensive Shield AMC</h3>
-              <p style="font-size: 24px; font-weight: 800; color: #2563eb; margin-bottom: 12px;">₹3,499 <span style="font-size: 14px; font-weight: 400; color: #64748b;">/ Year</span></p>
-              <ul style="list-style-type: check; padding-left: 20px; font-size: 14px; color: #1e3a8a; line-height: 1.8;">
-                <li><strong>Includes 1 Brand New TFC RO Membrane</strong></li>
-                <li><strong>Includes Booster Pump & SMPS Coverage</strong></li>
-                <li>Full Filter Kit Replacement (Sediment + Carbon)</li>
-                <li>4 Scheduled Periodic Maintenance Visits</li>
-                <li>Zero Labor or Spare Replacement Charges</li>
+
+            <div style="border: 2px solid #2563eb; padding: 28px; border-radius: 12px; background: #eff6ff; position: relative;">
+              <div style="position: absolute; top: -12px; right: 20px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Most Popular</div>
+              <span style="background: #dbeafe; color: #1e40af; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Comprehensive Plan</span>
+              <h3 style="font-size: 22px; font-weight: 800; color: #1e3a8a; margin-top: 12px; margin-bottom: 6px;">Gold Total Secure AMC</h3>
+              <p style="font-size: 28px; font-weight: 800; color: #2563eb; margin-bottom: 12px;">₹2,999 <span style="font-size: 14px; font-weight: 400; color: #64748b;">/ Year</span></p>
+              <p style="font-size: 13px; color: #1e40af; margin-bottom: 16px;">Recommended for Hyderabad borewell water up to 2,000 PPM TDS.</p>
+              <ul style="padding-left: 20px; font-size: 14px; color: #1e3a8a; line-height: 1.8;">
+                <li><strong>Includes 1 Brand New Genuine TFC RO Membrane Replacement</strong></li>
+                <li>4 Scheduled Periodic Maintenance Visits (every 90 days)</li>
+                <li>Full Filter Cartridge Kit Replacement (Sediment + Pre-Carbon + Post-Carbon)</li>
+                <li>Unlimited Emergency Breakdown Service Calls with Priority SLA</li>
+                <li>Solenoid Valve (SV) & Auto-Cutoff Float Switch Replacement Coverage</li>
+                <li>Zero Labor & Zero Spare Part Charges</li>
+              </ul>
+            </div>
+
+            <div style="border: 2px solid #e2e8f0; padding: 28px; border-radius: 12px; background: #ffffff;">
+              <span style="background: #f3e8ff; color: #7e22ce; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">All-Inclusive VIP</span>
+              <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 12px; margin-bottom: 6px;">Platinum VIP Total Care</h3>
+              <p style="font-size: 28px; font-weight: 800; color: #2563eb; margin-bottom: 12px;">₹4,499 <span style="font-size: 14px; font-weight: 400; color: #64748b;">/ Year</span></p>
+              <p style="font-size: 13px; color: #64748b; margin-bottom: 16px;">Total bumper-to-bumper protection including electrical motors and adapters.</p>
+              <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
+                <li><strong>Includes Free Booster Pump Head / Motor Replacement</strong></li>
+                <li><strong>Includes Free 24V/36V SMPS Power Adapter Replacement</strong></li>
+                <li><strong>Includes Brand New High-Rejection RO Membrane</strong></li>
+                <li>4 Scheduled Maintenance Visits + Comprehensive Annual Water Quality Audit</li>
+                <li>UV Chamber, Ballast & Germicidal Lamp Coverage</li>
+                <li>Priority 2-Hour Guaranteed Emergency Response</li>
               </ul>
             </div>
           </div>
         </section>
 
+        <!-- What is Covered Section -->
         <section style="margin-bottom: 40px;">
-          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">What is Covered Under Comprehensive AMC</h2>
-          <ul style="list-style-type: disc; padding-left: 24px; color: #334155; margin-bottom: 20px; line-height: 1.8;">
-            <li><strong>All Consumable Filters:</strong> Free replacement of 5-micron spun sediment filters, granular activated carbon filters, and post-carbon polishing cartridges during the contract period.</li>
-            <li><strong>Electrical Components:</strong> Replacement or repair of faulty 24V SMPS adapters, solenoid valves (SV), low-pressure switches, and auto-cutoff float switches.</li>
-            <li><strong>Booster Pump & Mechanicals:</strong> Servicing and replacement of pump heads, vibration dampening dampers, and plumbing elbows.</li>
-            <li><strong>Priority Doorstep Response:</strong> AMC customers receive priority 60-minute technician dispatch for any unexpected breakdown or leakage.</li>
-          </ul>
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">What Our Comprehensive RO AMC Plans Cover</h2>
+          <p style="color: #475569; margin-bottom: 16px;">
+            Our maintenance contracts are designed with zero ambiguity. When you sign up for an AMC with Rainbow Aquafresh Systems, our engineers inspect and safeguard every critical component of your purification system:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px;">
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Consumable Pre-Filters & Carbon</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Regular replacement of 5-micron spun polypropylene sediment filters, extruded carbon blocks, and coconut-shell post-carbon cartridges to trap silt and chlorine.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. RO Membrane Inspection & Change</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Laboratory-standard salt rejection verification. If TDS rejection drops below 85% or pores foul with scale, we install a genuine 75/80/100 GPD TFC membrane at zero cost under Gold/Platinum plans.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">3. Pump & Electrical Checks</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Voltage testing of the 24V SMPS adapter, solenoid valve continuity, auto-cut micro-switches, and diaphragm booster pump pressure (80–120 PSI) to prevent dry runs.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">4. Leakage & Plumbing Inspection</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Examination of high-pressure Teflon tubing, push-fit connectors, diverter valves, and storage tank auto-cutoff floats to prevent cabinet or countertop water damage.</p>
+            </div>
+          </div>
         </section>
 
+        <!-- Commercial RO Plant AMC -->
+        <section style="margin-bottom: 40px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 12px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Commercial & Institutional RO Plant AMC in Hyderabad</h2>
+          <p style="color: #475569; margin-bottom: 16px;">
+            In addition to residential purifiers, Rainbow Aquafresh Systems manages annual maintenance contracts for <a href="/commercial-ro-plants" style="color: #2563eb; font-weight: 600;">Commercial RO Plants</a> operating in schools, colleges, multi-specialty hospitals, hotels, software parks, and gated communities across Hyderabad.
+          </p>
+          <p style="color: #475569; margin-bottom: 20px;">
+            Commercial plants ranging from <strong>50 LPH, 250 LPH, 500 LPH, to 2,000 LPH</strong> demand specialized preventive care. Our commercial AMC agreements include scheduled sand and activated carbon media backwashing, antiscalant dosing pump calibration, raw vs pure water flow meter audits, high-pressure pump servicing, and industrial 4040/8040 membrane chemical cleaning (CIP). Contact our commercial engineering desk for custom plant evaluations.
+          </p>
+          <a href="/commercial-ro-plants" style="display: inline-block; background: #2563eb; color: #fff; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Explore Commercial RO Plant Solutions →</a>
+        </section>
+
+        <!-- Cost Comparison: AMC vs Pay Per Visit -->
         <section style="margin-bottom: 40px;">
-          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Frequently Asked Questions About RO AMC</h2>
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">RO AMC vs. Paying Per Visit: Real Cost Comparison</h2>
+          <p style="color: #475569; margin-bottom: 20px;">
+            Many homeowners wonder if paying an annual contract is genuinely more economical than calling a technician on-demand. Here is how the actual costs compare across 12 months in Hyderabad:
+          </p>
+          <div style="overflow-x: auto; margin-bottom: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 14px; border: 1px solid #334155;">Service Event</th>
+                  <th style="padding: 14px; border: 1px solid #334155;">Without AMC (Pay-Per-Visit)</th>
+                  <th style="padding: 14px; border: 1px solid #334155;">With Rainbow Aquafresh AMC (Gold)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Periodic Checkups (3 to 4 visits)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #dc2626;">₹800 – ₹1,200 (Visiting fees)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹0 (Included)</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Pre-Filter & Carbon Replacements (2 sets)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #dc2626;">₹1,200 – ₹1,600</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹0 (Included)</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">RO Membrane Replacement</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #dc2626;">₹1,600 – ₹2,400</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹0 (Included in Gold)</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Emergency Breakdown Visit</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #dc2626;">₹350 + Labor per visit</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹0 (Unlimited visits)</td>
+                </tr>
+                <tr style="background: #eff6ff; font-weight: 800;">
+                  <td style="padding: 14px; border: 1px solid #93c5fd; color: #1e3a8a;">Estimated Annual Total</td>
+                  <td style="padding: 14px; border: 1px solid #93c5fd; color: #dc2626;">₹3,950 – ₹5,550+</td>
+                  <td style="padding: 14px; border: 1px solid #93c5fd; color: #16a34a; font-size: 16px;">Only ₹2,999 All-Inclusive</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 14px; color: #64748b; font-style: italic;">
+            * An AMC not only saves up to 40% in direct cash expenses, but also ensures your water purifier never delivers contaminated water due to delayed filter changes.
+          </p>
+        </section>
+
+        <!-- Multi-Brand AMC Coverage -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Multi-Brand RO Purifiers Supported Under AMC</h2>
+          <p style="color: #475569; margin-bottom: 16px;">
+            Our certified technicians carry multi-brand diagnostic kits and genuine compatible components. We actively maintain:
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+            <a href="/kent-ro-service-repair-hyderabad" style="padding: 8px 16px; background: #eff6ff; color: #1d4ed8; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 13px;">Kent RO AMC</a>
+            <span style="padding: 8px 16px; background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 600; font-size: 13px;">Aquaguard Eureka Forbes AMC</span>
+            <span style="padding: 8px 16px; background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 600; font-size: 13px;">Pureit Water Purifier AMC</span>
+            <span style="padding: 8px 16px; background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 600; font-size: 13px;">Livpure RO AMC</span>
+            <span style="padding: 8px 16px; background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 600; font-size: 13px;">AO Smith RO AMC</span>
+            <span style="padding: 8px 16px; background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; border-radius: 8px; font-weight: 600; font-size: 13px;">Havells & Blue Star AMC</span>
+            <a href="/products/" style="padding: 8px 16px; background: #eff6ff; color: #1d4ed8; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 13px;">Rainbow Aquafresh Models</a>
+          </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Frequently Asked Questions About RO AMC in Hyderabad</h2>
           <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div style="border: 1px solid #e2e8f0; padding: 18px; border-radius: 8px;">
-              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Can I buy an AMC for a non-Rainbow brand water purifier?</h3>
-              <p style="color: #475569; margin: 0;">Yes, we provide AMC plans for Kent, Aquaguard, Pureit, Livpure, AO Smith, Havells, and all assembled RO units across Hyderabad.</p>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">What is the difference between Comprehensive AMC and Basic AMC?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Our Basic (Silver) AMC covers routine scheduled maintenance visits, free sediment/carbon filter replacements, and zero-charge breakdown calls. Our Comprehensive (Gold & Platinum) AMC additionally includes free replacement of the expensive Reverse Osmosis (RO) membrane and electrical components like the booster pump and 24V SMPS power adapter if they malfunction.</p>
             </div>
-            <div style="border: 1px solid #e2e8f0; padding: 18px; border-radius: 8px;">
-              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How do scheduled maintenance visits work?</h3>
-              <p style="color: #475569; margin: 0;">Our automated service CRM alerts you every 90 to 120 days to schedule a convenient appointment for preventive maintenance, filter cleaning, and TDS testing.</p>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Does your AMC cover non-Rainbow purifiers like Kent, Aquaguard, Pureit, and Livpure?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes, Rainbow Aquafresh Systems provides annual maintenance contracts for all major domestic water purifier brands in Hyderabad, including Kent, Eureka Forbes Aquaguard, Pureit, Livpure, AO Smith, Havells, Blue Star, and custom assembled RO systems.</p>
             </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How often will a technician visit for scheduled preventive maintenance?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Under our AMC contracts, our service team proactively schedules 3 to 4 periodic maintenance visits per year (every 90 to 120 days). During each visit, our technician inspects filters, measures input and output TDS, sanitizes the water storage tank, and tests operating pump pressure.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Is the RO membrane really replaced free under Gold and Platinum plans?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes. If your water purifier's output TDS increases or the flow drops due to scaling during the contract period, we install a 100% brand-new, genuine high-rejection TFC membrane with zero charges for parts or labor.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">What happens if my water purifier breaks down between scheduled service visits?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">AMC members receive unlimited emergency breakdown visits. When you call or WhatsApp our helpline, a certified technician is dispatched to your doorstep within 60 to 90 minutes anywhere in Greater Hyderabad with zero visiting or labor charges.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Do you provide Commercial RO Plant AMC in Hyderabad?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes. We offer customized commercial RO plant AMC contracts for residential gated communities, hospitals, schools, corporate offices, and restaurants with plant capacities from 50 LPH to 2,000 LPH, covering high-pressure pumps, multi-port valves, media vessels, and industrial 4040/8040 membranes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internal Links Section -->
+        <section style="margin-bottom: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
+          <h2 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Explore Related Water Purifier Services:</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="/ro-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Repair Hyderabad</a>
+            <a href="/ro-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Service Hub Hyderabad</a>
+            <a href="/ro-membrane-replacement-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Membrane Replacement</a>
+            <a href="/ro-filter-replacement-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Filter Replacement</a>
+            <a href="/kent-ro-service-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Kent RO Service & Repair</a>
+            <a href="/commercial-ro-plants" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Commercial RO Plants</a>
+            <a href="/products/" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Products & Purifiers Catalog</a>
+            <a href="/contact" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Contact & Helpline</a>
           </div>
         </section>
         ${COMMON_FOOTER}
@@ -574,39 +874,261 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/about": {
-    title: "About Rainbow Aquafresh Systems | RO Experts Hyderabad",
-    description: "Learn about Rainbow Aquafresh Systems, Hyderabad's trusted water purification specialists since 2004. Certified engineers. Call +91 8885556965.",
-    keywords: "About Rainbow Aquafresh, Water Purifier Company Hyderabad, RO Experts Hyderabad",
+    title: "About Rainbow Aquafresh Systems | RO Water Solutions Hyderabad",
+    description: "Learn about Rainbow Aquafresh Systems, Hyderabad's trusted water purification sales, repair & commercial RO specialists since 2004. Call +91 8885556965.",
+    keywords: "About Rainbow Aquafresh Systems, RO water purifier company Hyderabad, RO experts Hyderabad, commercial RO plant manufacturers Hyderabad, water purifier service Hyderabad",
     canonical: "https://www.rainbowafs.com/about",
     h1: "About Rainbow Aquafresh Systems",
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.rainbowafs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://www.rainbowafs.com/about"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Rainbow Aquafresh Systems",
+        "url": "https://www.rainbowafs.com/about",
+        "description": "Established in 2004, Rainbow Aquafresh Systems is Hyderabad's trusted water purification sales, doorstep repair, AMC maintenance, and commercial RO plant engineering specialist.",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "name": "Rainbow Aquafresh Systems",
+          "foundingDate": "2004",
+          "telephone": "+918885556965",
+          "email": "rainbow.afs@gmail.com",
+          "url": "https://www.rainbowafs.com/",
+          "image": "https://www.rainbowafs.com/assets/rainbow_aquafresh_banner_1782197155821.jpg",
+          "priceRange": "₹150 - ₹25000",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500036",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 17.3712,
+            "longitude": 78.4977
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Hyderabad" },
+            { "@type": "City", "name": "Secunderabad" },
+            { "@type": "AdministrativeArea", "name": "Telangana" }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long has Rainbow Aquafresh Systems operated in Hyderabad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rainbow Aquafresh Systems was established in 2004 in Malakpet, Hyderabad. For over 20 continuous years, we have provided residential and commercial water purification sales, repair, and annual maintenance contracts across Greater Hyderabad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What range of services does Rainbow Aquafresh Systems provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide end-to-end water treatment solutions including domestic RO purifier sales and assembly, multi-brand doorstep repairs, filter and membrane replacements, annual maintenance contracts (AMC), turnkey commercial RO plants (50 LPH to 2,000 LPH), industrial water treatment systems, and whole-house automatic water softeners."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas do you serve across Hyderabad and Telangana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide doorstep technician dispatch across all localities of Greater Hyderabad and Secunderabad—including Malakpet, Dilsukhnagar, LB Nagar, Kothapet, Kukatpally, Miyapur, Gachibowli, Kondapur, Hitech City, Madhapur, Uppal, and Banjara Hills. For commercial and industrial RO plant installations, we serve clients throughout Telangana and Andhra Pradesh."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide warranties on repairs and spare parts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every component replaced by our engineers—including booster pumps, SMPS adapters, and RO membranes—comes with an official 6 to 12-month written warranty alongside verified digital TDS testing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your technicians in-house employees or subcontractors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All service requests are fulfilled by our full-time, background-verified, in-house technical team. We do not outsource service calls to third-party freelancers, ensuring consistent workmanship, professional ethics, and transparent pricing."
+            }
+          }
+        ]
+      }
+    ]),
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">About Rainbow Aquafresh Systems</span>
+        </nav>
+
         <section style="margin-bottom: 40px;">
           <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">About Rainbow Aquafresh Systems</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
-            For over two decades, Rainbow Aquafresh Systems has been at the forefront of drinking water purification technology across Hyderabad and Telangana. Established in 2004, our mission has been simple and uncompromising: to deliver pure, healthy, and mineral-balanced drinking water to every household, community, and business.
+            Founded in 2004, <strong>Rainbow Aquafresh Systems</strong> has stood as Hyderabad's trusted benchmark for drinking water purification engineering, sales, emergency doorstep repairs, and commercial water plant installations for over two decades.
           </p>
           <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
-            What began as a local technical service center in Malakpet has grown into one of Greater Hyderabad's most trusted water purification networks, serving over 50,000 satisfied families and 500+ commercial clients.
+            What began as a specialized technical repair and assembly workshop in Malakpet has expanded into a comprehensive water treatment network serving more than 50,000 households, residential gated communities, hospitals, academic institutions, and manufacturing facilities across Greater Hyderabad, Telangana, and Andhra Pradesh.
+          </p>
+          <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <p style="margin: 0 0 8px 0; font-weight: 700; color: #1e40af; font-size: 16px;">
+              Contact Our Engineering Desk: <a href="tel:+918885556965" style="color: #1d4ed8; text-decoration: underline;">+91 8885556965</a> | Alternate Line: <a href="tel:+918341256965" style="color: #1d4ed8; text-decoration: underline;">+91 8341256965</a>
+            </p>
+            <p style="margin: 0; font-size: 14px; color: #1e3a8a;">
+              Registered Head Office: 16-10-27/109, 37-2RT, MCH Colony, Malakpet, Hyderabad, Telangana 500036, India | Email: <a href="mailto:rainbow.afs@gmail.com" style="color: #1d4ed8; text-decoration: underline;">rainbow.afs@gmail.com</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Solving Hyderabad's Complex Water Challenges -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Two Decades of Solving Hyderabad's Water Challenges</h2>
+          <p style="color: #475569; margin-bottom: 16px;">
+            Water quality across the Hyderabad metropolitan region varies drastically by neighborhood and geological aquifer depth. Households receiving municipal Krishna or Godavari supplies contend with seasonal silt, pipeline rust, and residual chlorine. Conversely, suburban communities reliant on deep borewells—across areas like Kukatpally, Gachibowli, Miyapur, Manikonda, and LB Nagar—frequently encounter groundwater TDS exceeding 1,200 to 2,500 PPM accompanied by aggressive calcium and magnesium hardness.
+          </p>
+          <p style="color: #475569; margin-bottom: 20px;">
+            Rainbow Aquafresh Systems was established to eliminate guesswork through scientific water diagnostics. Before recommending any purification hardware or replacement filter, our technicians test feed water TDS, pH balance, and pump pressures. This ensures that every system we deploy achieves optimal mineral retention and pure, sweet-tasting drinking water.
           </p>
         </section>
 
+        <!-- Full Spectrum Solutions We Deliver -->
         <section style="margin-bottom: 40px;">
-          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Why Hyderabad Chooses Rainbow Aquafresh</h2>
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 20px;">Full-Spectrum Water Treatment Solutions We Provide</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 24px;">
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Domestic RO Water Purifiers</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Custom-configured multi-stage RO+UV+UF+Alkaline purification systems engineered specifically for Hyderabad municipal and borewell water profiles.</p>
+              <a href="/products/" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">Explore Domestic Products →</a>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Commercial RO Plants (50 to 2,000 LPH)</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Skid-mounted commercial systems with SS-304 frames, FRP pressure vessels, and industrial 4040/8040 membranes for schools, hospitals, and restaurants.</p>
+              <a href="/commercial-ro-plants" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">View Commercial Plants →</a>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">3. Multi-Brand Doorstep RO Repair</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Rapid on-site troubleshooting for low water flow, pump vibration, leakage, UV fail alarms, and PCB errors for Kent, Aquaguard, Pureit, and Livpure.</p>
+              <a href="/ro-repair-hyderabad" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">Schedule RO Repair →</a>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">4. Annual Maintenance Contracts (AMC)</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Worry-free maintenance contracts starting at ₹1,999/yr covering periodic service visits, free consumable filters, membrane coverage, and zero labor fees.</p>
+              <a href="/ro-amc-service" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">View AMC Plans →</a>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">5. Genuine Spares & Membrane Replacement</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Direct factory procurement of 75/80/100 GPD TFC membranes, heavy-duty 24V copper booster pumps, SMPS adapters, and food-grade push-fit fittings.</p>
+              <a href="/ro-membrane-replacement-service-hyderabad" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">Membrane Replacement Service →</a>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; border-radius: 10px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">6. Water Softeners & Media Filtration</h3>
+              <p style="font-size: 14px; color: #475569; margin-bottom: 12px;">Ion-exchange automatic water softeners and multi-grade sand/activated carbon filters to treat hard borewell water for entire bungalows and apartments.</p>
+              <a href="/water-guide" style="color: #2563eb; font-weight: 600; font-size: 13px; text-decoration: none;">Read Water Quality Guide →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Core Pillars -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Our Core Operational Standards</h2>
           <ul style="list-style-type: disc; padding-left: 24px; color: #334155; margin-bottom: 20px; line-height: 1.8;">
-            <li><strong>20+ Years of Technical Excellence:</strong> Deep knowledge of Hyderabad's local water aquifers, municipal pipelines, and deep borewell mineral characteristics.</li>
-            <li><strong>Certified Field Service Technicians:</strong> Every technician is rigorously trained in electro-mechanical diagnostics and customer service ethics.</li>
-            <li><strong>Direct Factory Procurement:</strong> We deal directly with certified manufacturers to guarantee 100% genuine spares without unauthorized markups.</li>
-            <li><strong>90-Minute Emergency Doorstep SLA:</strong> Dedicated dispatch hubs across West, East, North, and South Hyderabad zones.</li>
+            <li><strong>Full-Time Certified In-House Technicians:</strong> We never outsource service requests to unvetted gig workers. Every technician is a permanent employee trained in electro-mechanical diagnostics and water chemistry.</li>
+            <li><strong>Honest Digital Diagnostics:</strong> We measure TDS and system pressure before and after every repair in front of the customer, ensuring 100% transparency.</li>
+            <li><strong>No Unnecessary Part Replacements:</strong> If a clogged valve or loose elbow is the root cause, we repair it rather than selling expensive unneeded components.</li>
+            <li><strong>Factory-Direct Spares & Written Warranty:</strong> We source original factory-sealed spares directly from certified manufacturers, backing all replacements with clear 6 to 12-month warranties.</li>
+            <li><strong>60 to 90-Minute Emergency Dispatch:</strong> Mobile technician service hubs located strategically across Central, East, West, North, and South Hyderabad.</li>
           </ul>
         </section>
 
-        <section style="margin-bottom: 40px;">
-          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Our Core Values & Commitment</h2>
+        <!-- Service Coverage -->
+        <section style="margin-bottom: 40px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 12px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Service Reach Across Hyderabad, Telangana & Andhra Pradesh</h2>
           <p style="color: #475569; margin-bottom: 16px;">
-            We believe that clean drinking water is a fundamental health necessity. That is why we never recommend unnecessary part replacements, always verify water TDS on calibrated digital meters before and after every service, and provide comprehensive written warranties on all work.
+            We operate fully equipped service units across Greater Hyderabad and Secunderabad, covering:
           </p>
+          <p style="font-size: 14px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
+            <strong>East & South Zone:</strong> Malakpet, Dilsukhnagar, Kothapet, LB Nagar, Chaitanyapuri, Nagole, Hayathnagar, Vanasthalipuram, Ramanthapur, Uppal, Santosh Nagar.<br />
+            <strong>West & IT Corridor:</strong> Gachibowli, Kondapur, Hitech City, Madhapur, Manikonda, Kukatpally, KPHB Colony, Miyapur, Chandanagar, Hafeezpet.<br />
+            <strong>North & Central Zone:</strong> Secunderabad, Begumpet, Banjara Hills, Jubilee Hills, Tarnaka, Malkajgiri, Alwal, Bowenpally, Somajiguda, Mehdipatnam.
+          </p>
+          <p style="font-size: 14px; color: #475569; margin: 0;">
+            For commercial and industrial RO plants (250 LPH to 10,000 LPH), our turnkey engineering team executes installations and maintenance projects across all districts of Telangana and Andhra Pradesh.
+          </p>
+        </section>
+
+        <!-- FAQs Section -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Frequently Asked Questions About Rainbow Aquafresh Systems</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How long has Rainbow Aquafresh Systems operated in Hyderabad?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Rainbow Aquafresh Systems was established in 2004 in Malakpet, Hyderabad. For over 20 continuous years, we have provided residential and commercial water purification sales, repair, and annual maintenance contracts across Greater Hyderabad.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">What range of services does Rainbow Aquafresh Systems provide?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">We provide end-to-end water treatment solutions including domestic RO purifier sales and assembly, multi-brand doorstep repairs, filter and membrane replacements, annual maintenance contracts (AMC), turnkey commercial RO plants (50 LPH to 2,000 LPH), industrial water treatment systems, and whole-house automatic water softeners.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">What areas do you serve across Hyderabad and Telangana?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">We provide doorstep technician dispatch across all localities of Greater Hyderabad and Secunderabad—including Malakpet, Dilsukhnagar, LB Nagar, Kothapet, Kukatpally, Miyapur, Gachibowli, Kondapur, Hitech City, Madhapur, Uppal, and Banjara Hills. For commercial and industrial RO plant installations, we serve clients throughout Telangana and Andhra Pradesh.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Do you provide warranties on repairs and spare parts?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes. Every component replaced by our engineers—including booster pumps, SMPS adapters, and RO membranes—comes with an official 6 to 12-month written warranty alongside verified digital TDS testing.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Are your technicians in-house employees or subcontractors?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">All service requests are fulfilled by our full-time, background-verified, in-house technical team. We do not outsource service calls to third-party freelancers, ensuring consistent workmanship, professional ethics, and transparent pricing.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internal Links Section -->
+        <section style="margin-bottom: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
+          <h2 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Explore Our Services & Products:</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="/ro-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Service Hyderabad</a>
+            <a href="/products/" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Domestic Purifiers Catalog</a>
+            <a href="/ro-amc-service" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Annual Maintenance Plans</a>
+            <a href="/commercial-ro-plants" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Commercial RO Plants</a>
+            <a href="/ro-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Doorstep RO Repair</a>
+            <a href="/ro-membrane-replacement-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Membrane Replacement</a>
+            <a href="/kent-ro-service-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Kent RO Service</a>
+            <a href="/contact" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Contact & Helpline</a>
+          </div>
         </section>
         ${COMMON_FOOTER}
       </main>
@@ -805,6 +1327,710 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
         ${COMMON_FOOTER}
       </main>
     `
+  },
+  "/kent-ro-service-repair-hyderabad": {
+    title: "KENT RO Service & Repair in Hyderabad | Rainbow Aquafresh",
+    description: "Doorstep KENT RO service & repair in Hyderabad. Independent experts for Kent Grand, Prime & Mineral RO. Filter change, UV alarm reset, membrane repair. Call +91 8885556965.",
+    keywords: "KENT RO service Hyderabad, KENT RO repair Hyderabad, KENT water purifier service Hyderabad, KENT RO repair near me, KENT purifier service Hyderabad, KENT filter replacement Hyderabad, KENT membrane replacement Hyderabad",
+    canonical: "https://www.rainbowafs.com/kent-ro-service-repair-hyderabad",
+    h1: "KENT RO Service & Repair in Hyderabad",
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.rainbowafs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.rainbowafs.com/ro-service-hyderabad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "KENT RO Service & Repair",
+            "item": "https://www.rainbowafs.com/kent-ro-service-repair-hyderabad"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "KENT RO Service & Repair in Hyderabad",
+        "serviceType": "Water Purifier Repair and Maintenance",
+        "description": "Independent doorstep repair, scheduled servicing, filter replacement, RO membrane renewal, UV fail alarm reset, booster pump diagnostics, and annual maintenance for Kent RO water purifiers across Greater Hyderabad.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Rainbow Aquafresh Systems",
+          "telephone": "+918885556965",
+          "url": "https://www.rainbowafs.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500036",
+            "addressCountry": "IN"
+          }
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Hyderabad" },
+          { "@type": "City", "name": "Secunderabad" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Kent RO Service Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Kent Inspection & Electronic Diagnostic",
+              "price": "299",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kent Filter Change Kit & Alarm Reset",
+              "price": "750",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Genuine Kent RO Membrane Replacement",
+              "price": "1400",
+              "priceCurrency": "INR"
+            }
+          ]
+        },
+        "url": "https://www.rainbowafs.com/kent-ro-service-repair-hyderabad"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is my Kent RO purifier beeping continuously?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kent purifiers have built-in micro-controller alarms: 2 short beeps indicate a UV lamp failure or faulty UV ballast; 4 short beeps indicate the filter life timer has reached its programmed limit. Our technicians diagnose the root cause, replace the failing component, and reset the PCB alarm sensor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you an authorized Kent service center?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rainbow Aquafresh Systems is an independent multi-brand water purification sales and service provider. We are not an authorized franchise of Kent RO Systems Ltd. We specialize in post-warranty doorstep servicing, transparent pricing, and genuine compatible spare parts across Hyderabad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Kent RO models do you service in Hyderabad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We service all domestic Kent models including Kent Grand+, Kent Grand Star, Kent Prime, Kent Prime TC, Kent Pearl, Kent Sterling, Kent Maxx, Kent Supreme, Kent Elegant, Kent Pride, Kent Mineral RO, and Kent under-sink models."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can a technician visit my home in Hyderabad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our field technicians are located across East, West, North, and South Hyderabad, reaching your doorstep within 60 to 90 minutes of booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you calibrate the TDS controller on Kent purifiers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Kent Mineral RO purifiers feature an adjustable TDS controller valve. We use calibrated digital TDS meters to adjust the pure water TDS to the recommended 80–150 PPM range for balanced mineral content and pleasant taste."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer Annual Maintenance Contracts (AMC) for Kent RO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer comprehensive and basic annual maintenance contracts for Kent purifiers starting from ₹1,999/year, covering periodic filter changes, free breakdown visits, and membrane replacement."
+            }
+          }
+        ]
+      }
+    ]),
+    contentHtml: `
+      ${COMMON_HEADER}
+      <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/ro-service-hyderabad" style="color: #2563eb; text-decoration: none;">Services</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">KENT RO Service & Repair</span>
+        </nav>
+
+        <!-- Disclaimer Banner -->
+        <div style="background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 6px; margin-bottom: 30px; font-size: 13px; color: #92400e;">
+          <strong>Independent Service Notice:</strong> Rainbow Aquafresh Systems is an independent multi-brand water purifier sales and service provider. We are not an authorized franchisee or official service center of Kent RO Systems Ltd. All product names, logos, and trademarks (such as 'Kent') are the property of their respective owners and are used here solely for descriptive and identification purposes.
+        </div>
+
+        <section style="margin-bottom: 40px;">
+          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">KENT RO Service & Repair in Hyderabad</h1>
+          <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
+            Get prompt, independent doorstep <strong>KENT RO service and repair across Greater Hyderabad</strong>. Our certified multi-brand technicians arrive at your home within 60 to 90 minutes with calibrated digital TDS meters, replacement filter kits, and genuine compatible spare parts for all Kent models.
+          </p>
+          <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
+            Whether your Kent purifier is beeping with a UV fail alarm or filter change alarm, experiencing slow water flow into the storage tank, suffering from internal push-fit leaks, or producing water with high TDS and bitter taste, our technicians troubleshoot the exact root cause and provide clear upfront quotes before starting any work.
+          </p>
+          <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <p style="margin: 0 0 8px 0; font-weight: 700; color: #1e40af; font-size: 16px;">
+              Doorstep Kent Service Booking: <a href="tel:+918885556965" style="color: #1d4ed8; text-decoration: underline;">+91 8885556965</a> | Alternate Helpline: <a href="tel:+918341256965" style="color: #1d4ed8; text-decoration: underline;">+91 8341256965</a>
+            </p>
+            <p style="margin: 0; font-size: 14px; color: #1e3a8a;">
+              Instant Booking via WhatsApp: <a href="https://wa.me/918885556965?text=Hello%20Rainbow%20Aquafresh,%20I%20need%20Kent%20RO%20Service%20in%20Hyderabad" style="color: #16a34a; font-weight: bold; text-decoration: underline;">Chat with our Kent Technician Desk</a> (60 to 90 min arrival)
+            </p>
+          </div>
+        </section>
+
+        <!-- Kent Service Inclusions & Features -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">What Our Kent RO Doorstep Service Covers</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 24px;">
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Filter & UV Alarm PCB Reset</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We diagnose the micro-controller alarm codes (2 beeps = UV fail; 4 beeps = filter change), replace exhausted consumables, and properly reset the PCB electronic timer.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Filter & Carbon Replacement</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Factory-sealed spun polypropylene sediment filters, granular activated carbon (GAC), and post-carbon taste enhancers designed for Kent purifier chambers.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">3. Genuine TFC RO Membrane</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Installation of 75/80/100 GPD high-rejection membranes (Dow Filmtec / Vontron) restoring salt rejection to 95%+ for high TDS borewell water.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">4. Booster Pump & Leak Repair</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Pump pressure testing (70–110 PSI), diaphragm overhaul, anti-vibration rubber mount tightening, and push-fit quick-connect elbow replacement.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">5. TDS Controller Calibration</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Precision adjustment of the patented Kent Mineral RO TDS valve with calibrated digital meters to retain essential minerals at the recommended 80–150 PPM.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">6. UV Chamber & Quartz Sleeve</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">Ultrasonic sanitization of the quartz glass tube, testing the 11W germicidal UV tube, and replacement of failing electronic ballasts.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Troubleshooting Matrix -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Common Kent RO Problems & Solutions</h2>
+          <div style="overflow-x: auto; margin-bottom: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 12px; border: 1px solid #334155;">Kent Symptom</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Probable Root Cause</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Rainbow Aquafresh Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Continuous 2 Beeps (UV Fail Alarm)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Blown 11W UV lamp, damaged ballast SMPS, or scaled quartz sleeve</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Test ballast voltage, replace UV tube, clean quartz sleeve, and reset PCB</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Continuous 4 Beeps (Filter Change Alarm)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Micro-controller timer reached 600 hours of continuous purification</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Replace inline sediment and carbon cartridges, perform PCB sensor reset</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Water Filling Very Slowly into Tank</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Choked sediment pre-filter, scaled RO membrane, or pump pressure &lt;60 PSI</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Digital pressure audit, replace clogged filters/membrane, match flow restrictor</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Purified Water Tasting Bitter or Flat</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">TDS controller set too low or exhausted post-carbon cartridge</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Calibrate TDS controller valve to 80–150 PPM using digital TDS meter</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Booster Pump Vibrating Loudly or Leaking</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Worn pump head diaphragm, loose motor mounting, or dry-run cavitation</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Replace pump head diaphragm seal, tighten rubber mounts, test inlet solenoid</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Water Leaking Inside Purifier Base</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Cracked quick-connect elbow, loose auto-cutoff valve, or tubing damage</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Pressure leak inspection, fit new food-grade push-fit elbows with locking clips</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Transparent Kent Service & Spare Parts Pricing</h2>
+          <div style="overflow-x: auto; margin-bottom: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 12px; border: 1px solid #334155;">Service / Spare Item</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Estimated Price</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Scope of Work</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Doorstep Inspection & Diagnostic</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹299 (Waived on Repair)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Full electronic & water flow diagnostic, TDS audit, upfront quote</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Kent Filter Change Kit</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹750 – ₹1,100</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Inline sediment + activated carbon + pre-filter candle + alarm reset</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Genuine Kent RO Membrane Replacement</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,400 – ₹2,200</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">75/80/100 GPD high-rejection TFC membrane with housing sanitization</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Kent UV Lamp & Ballast Replacement</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹650 – ₹1,200</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">11W Phillips/Osram germicidal UV tube + electronic ballast + UV alarm reset</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Booster Pump Repair / Replacement</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,200 – ₹2,200</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Heavy-duty 24V copper booster pump replacement or diaphragm repair</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Kent Annual Maintenance Contract (AMC)</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,999 – ₹2,999 / year</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Includes 3-4 visits, free filter changes, free membrane (Gold), and zero repair charges</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Kent Models Serviced -->
+        <section style="margin-bottom: 40px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 28px; border-radius: 12px;">
+          <h2 style="font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Kent Models We Actively Service in Hyderabad</h2>
+          <p style="color: #475569; font-size: 14px; margin-bottom: 16px;">Our mobile service fleet carries compatible spares for all popular Kent models:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Grand+</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Grand Star</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Prime+</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Prime TC</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Pearl</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Pearl Star</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Supreme</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Supreme Extra</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Sterling+</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Maxx</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Elegant</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Pride</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Mineral RO</span>
+            <span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">Kent Under-Sink RO</span>
+          </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Frequently Asked Questions About Kent RO Service in Hyderabad</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Why is my Kent RO purifier beeping continuously?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Kent purifiers have built-in micro-controller alarms: 2 short beeps indicate a UV lamp failure or faulty UV ballast; 4 short beeps indicate the filter life timer has reached its programmed limit. Our technicians diagnose the root cause, replace the failing component, and reset the PCB alarm sensor.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Are you an authorized Kent service center?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Rainbow Aquafresh Systems is an independent multi-brand water purification sales and service provider. We are not an authorized franchise of Kent RO Systems Ltd. We specialize in post-warranty doorstep servicing, transparent pricing, and genuine compatible spare parts across Hyderabad.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Which Kent RO models do you service in Hyderabad?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">We service all domestic Kent models including Kent Grand+, Kent Grand Star, Kent Prime, Kent Prime TC, Kent Pearl, Kent Sterling, Kent Maxx, Kent Supreme, Kent Elegant, Kent Pride, Kent Mineral RO, and Kent under-sink models.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How quickly can a technician visit my home in Hyderabad?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Our field technicians are located across East, West, North, and South Hyderabad, reaching your doorstep within 60 to 90 minutes of booking.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Can you calibrate the TDS controller on Kent purifiers?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes, Kent Mineral RO purifiers feature an adjustable TDS controller valve. We use calibrated digital TDS meters to adjust the pure water TDS to the recommended 80–150 PPM range for balanced mineral content and pleasant taste.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Do you offer Annual Maintenance Contracts (AMC) for Kent RO?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes, we offer comprehensive and basic annual maintenance contracts for Kent purifiers starting from ₹1,999/year, covering periodic filter changes, free breakdown visits, and membrane replacement.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internal Links Section -->
+        <section style="margin-bottom: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
+          <h2 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Related Water Purifier Services in Hyderabad:</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="/ro-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Repair Hyderabad</a>
+            <a href="/ro-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Service Hub</a>
+            <a href="/ro-membrane-replacement-service-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Membrane Replacement</a>
+            <a href="/ro-filter-replacement-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Filter Replacement</a>
+            <a href="/ro-amc-service" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO AMC Plans</a>
+            <a href="/commercial-ro-plants" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Commercial RO Plants</a>
+            <a href="/products/" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Purifiers Catalog</a>
+            <a href="/contact" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Contact & Helpline</a>
+          </div>
+        </section>
+        ${COMMON_FOOTER}
+      </main>
+    `
+  },
+  "/ro-membrane-replacement-service-hyderabad": {
+    title: "RO Membrane Replacement in Hyderabad | Genuine Filmtec 75-100 GPD",
+    description: "Scientific RO membrane replacement in Hyderabad. Genuine 75, 80 & 100 GPD Filmtec & Vontron membranes for high borewell TDS. Digital TDS test & warranty. Call +91 8885556965.",
+    keywords: "RO membrane replacement Hyderabad, RO membrane cost Hyderabad, RO membrane price Hyderabad, RO membrane change service, RO high TDS water Hyderabad, RO membrane lifespan, 75 GPD membrane Hyderabad, 100 GPD membrane Hyderabad",
+    canonical: "https://www.rainbowafs.com/ro-membrane-replacement-service-hyderabad",
+    h1: "RO Membrane Replacement Service in Hyderabad",
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.rainbowafs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.rainbowafs.com/ro-service-hyderabad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RO Membrane Replacement",
+            "item": "https://www.rainbowafs.com/ro-membrane-replacement-service-hyderabad"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "RO Membrane Replacement Service in Hyderabad",
+        "serviceType": "Water Purifier Membrane Replacement",
+        "description": "Scientific doorstep RO membrane replacement for high borewell and municipal water in Hyderabad. 75, 80, and 100 GPD genuine TFC membranes with digital TDS salt rejection audit, pump pressure test, and written warranty.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Rainbow Aquafresh Systems",
+          "telephone": "+918885556965",
+          "url": "https://www.rainbowafs.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500036",
+            "addressCountry": "IN"
+          }
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Hyderabad" },
+          { "@type": "City", "name": "Secunderabad" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "RO Membrane Replacement Tiers",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "75 GPD Genuine TFC Membrane Installation",
+              "price": "1400",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "80 GPD High-Rejection Membrane Installation",
+              "price": "1600",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "name": "100 GPD Heavy-Duty Borewell Membrane Installation",
+              "price": "1900",
+              "priceCurrency": "INR"
+            }
+          ]
+        },
+        "url": "https://www.rainbowafs.com/ro-membrane-replacement-service-hyderabad"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I know if my RO membrane is failing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most reliable indicator is water TDS: if your pure water TDS climbs above 150–200 PPM (or salt rejection falls below 85–90%), or water output reduces to a slow drip while reject water flows normally, the membrane is choked with scale or breached."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I replace the membrane or buy a new water purifier?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In almost all cases, replacing the membrane restores your water purifier to 95%+ factory purification efficiency at a fraction of the ₹12,000–₹20,000 cost of a new machine. Purifiers with intact bodies and good booster pumps work like brand new after membrane replacement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does an RO membrane last in Hyderabad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Membrane lifespan typically ranges between 18 and 36 months in Hyderabad. Longevity depends on your input water TDS (e.g. 400 PPM municipal water vs 2,000 PPM borewell water), daily consumption volume, and crucially, whether pre-filters are replaced every 3 to 6 months to prevent chlorine and silt fouling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which membrane capacity (GPD) should I choose?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard domestic units use 75 GPD (gallons per day) or 80 GPD membranes for input TDS up to 1,500 PPM. For heavy borewell water above 1,500 PPM or larger families, we install 100 GPD high-rejection membranes paired with an FR 550 flow restrictor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide commercial RO membrane replacement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we replace 4040 (250 LPH) and 8040 (1,000+ LPH) industrial membranes for commercial RO plants in schools, hospitals, hotels, and apartment complexes across Hyderabad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is it recommended to replace pre-filters alongside the membrane?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sediment and carbon pre-filters protect the delicate polyamide thin-film composite (TFC) membrane from dirt particles and chlorine. Installing a new membrane behind choked pre-filters drastically shortens its lifespan."
+            }
+          }
+        ]
+      }
+    ]),
+    contentHtml: `
+      ${COMMON_HEADER}
+      <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/ro-service-hyderabad" style="color: #2563eb; text-decoration: none;">Services</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">RO Membrane Replacement</span>
+        </nav>
+
+        <section style="margin-bottom: 40px;">
+          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">RO Membrane Replacement Service in Hyderabad</h1>
+          <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
+            Scientific doorstep <strong>RO membrane replacement service across Greater Hyderabad</strong>. We install 100% genuine factory-sealed 75 GPD, 80 GPD, and 100 GPD thin-film composite (TFC) membranes from certified global leaders (USA Dow Filmtec, Vontron, Toray) specifically calibrated for Hyderabad's high borewell TDS and municipal tap water.
+          </p>
+          <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
+            The RO membrane is the primary defense barrier filtering out dissolved toxic heavy metals (lead, arsenic, fluorides), hardness salts, and micro-contaminants at 0.0001 microns. When scaling or chlorine breakthrough ruins the membrane, water tastes salty or bitter, output TDS climbs above 200 PPM, and water trickles slowly while wastewater runs continuously. Replacing the membrane restores your machine to 95%+ factory purification efficiency.
+          </p>
+          <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <p style="margin: 0 0 8px 0; font-weight: 700; color: #1e40af; font-size: 16px;">
+              Direct Doorstep Membrane Replacement Helpline: <a href="tel:+918885556965" style="color: #1d4ed8; text-decoration: underline;">+91 8885556965</a> | Alternate Line: <a href="tel:+918341256965" style="color: #1d4ed8; text-decoration: underline;">+91 8341256965</a>
+            </p>
+            <p style="margin: 0; font-size: 14px; color: #1e3a8a;">
+              Instant Booking via WhatsApp: <a href="https://wa.me/918885556965?text=Hello%20Rainbow%20Aquafresh,%20I%20need%20RO%20Membrane%20Replacement%20in%20Hyderabad" style="color: #16a34a; font-weight: bold; text-decoration: underline;">Chat with our Water Engineering Desk</a> (60 to 90 min arrival)
+            </p>
+          </div>
+        </section>
+
+        <!-- Scientific Service Protocol -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Our 6-Step Scientific Membrane Replacement Protocol</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 24px;">
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Digital Salt Rejection Audit</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We test feed water TDS and purified water TDS with calibrated digital meters to determine exact salt rejection efficiency before touching any component.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Booster Pump Pressure Test</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We test booster pump operating pressure (80 to 120 PSI). Installing a new membrane behind an underperforming pump causes premature clogging and poor flow.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">3. Vessel Descaling & Sanitization</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We chemically descale the membrane vessel housing, flush out accumulated silt and biofilm, and replace silicone sealing O-rings to prevent raw water bypass.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">4. Genuine TFC Membrane Fitting</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We unseal a brand-new 75 GPD, 80 GPD, or 100 GPD factory-certified high-rejection polyamide membrane with verified security seals right in front of you.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">5. Flow Restrictor (FR) Matching</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We replace the capillary flow restrictor (FR 450 / FR 550) to balance drain flow against membrane backpressure, preventing premature membrane burnout.</p>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px;">
+              <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">6. Post-Carbon Taste & Mineral Balancing</h3>
+              <p style="font-size: 14px; color: #475569; margin: 0;">We flush initial carbon fines, balance alkaline mineral cartridges, and calibrate output drinking water TDS into the optimal sweet 80–120 PPM zone.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Troubleshooting Matrix -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Signs Your RO Membrane Has Failed</h2>
+          <div style="overflow-x: auto; margin-bottom: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 12px; border: 1px solid #334155;">Observed Symptom</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Technical Root Cause</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Corrective Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Water Tastes Salty, Hard, or Bitter</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Polyamide sheet breached or salt rejection fallen below 80%</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Install genuine 75/80/100 GPD TFC membrane & replace pre-carbon</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">TDS Reading &gt; 200–400 PPM in Pure Water</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Membrane pore rupture or housing internal O-ring bypass leak</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Digital rejection audit, replace vessel O-rings & install new membrane</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Water Trickles to a Drip while Drain Runs Non-Stop</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Heavy calcium carbonate and silica scale choking 0.0001 micron pores</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Booster pump pressure test, descaling & new high-flow membrane</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Zero Pure Water Output with Running Pump</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Complete crystallization inside spiral layers or choked flow restrictor</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Replace choked membrane and install new calibrated Flow Restrictor</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Chlorine / Chemical Odor in Purified Water</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #475569;">Exhausted pre-carbon filter allowing chlorine to oxidize membrane layers</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #1d4ed8; font-weight: 600;">Dual replacement of pre-carbon cartridge and genuine TFC membrane</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Transparent Membrane Replacement Pricing</h2>
+          <div style="overflow-x: auto; margin-bottom: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 12px; border: 1px solid #334155;">Membrane Capacity</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Estimated Price</th>
+                  <th style="padding: 12px; border: 1px solid #334155;">Recommended Water Source & Inclusions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">75 GPD Genuine TFC Membrane</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,400 – ₹1,800</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Ideal for municipal tap & mixed water up to 1,200 PPM TDS. Includes fitting & TDS test.</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">80 GPD High-Rejection Membrane</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,600 – ₹2,000</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Optimized for Hyderabad borewell water up to 1,800 PPM TDS with 92%+ salt rejection.</td>
+                </tr>
+                <tr style="background: #ffffff;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">100 GPD Heavy-Duty Borewell Membrane</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹1,900 – ₹2,400</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Commercial-grade sheet for severe hardness (up to 2,500 PPM TDS) and fast tank recovery.</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: 600;">Membrane + Complete Filter Kit Renewal</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0; color: #16a34a; font-weight: 700;">₹2,400 – ₹3,200</td>
+                  <td style="padding: 12px; border: 1px solid #e2e8f0;">Includes genuine membrane, spun sediment, pre-carbon, post-carbon, flow restrictor & flush.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Domestic vs Commercial RO Membranes -->
+        <section style="margin-bottom: 40px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 28px; border-radius: 12px;">
+          <h2 style="font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Commercial RO Plant Membrane Replacement (4040 & 8040)</h2>
+          <p style="color: #475569; font-size: 14px; margin-bottom: 16px;">
+            In addition to residential 75/80/100 GPD cartridges, Rainbow Aquafresh Systems replaces commercial <strong>4040 membranes (250 LPH to 1,000 LPH)</strong> and industrial <strong>8040 membranes (2,000+ LPH)</strong> for institutions, hospitals, restaurants, and manufacturing plants across Hyderabad, Telangana, and Andhra Pradesh.
+          </p>
+          <a href="/commercial-ro-plants" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none;">View Commercial RO Solutions →</a>
+        </section>
+
+        <!-- FAQs Section -->
+        <section style="margin-bottom: 40px;">
+          <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Frequently Asked Questions About RO Membrane Replacement</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How do I know if my RO membrane is failing?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">The most reliable indicator is water TDS: if your pure water TDS climbs above 150–200 PPM (or salt rejection falls below 85–90%), or water output reduces to a slow drip while reject water flows normally, the membrane is choked with scale or breached.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Should I replace the membrane or buy a new water purifier?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">In almost all cases, replacing the membrane restores your water purifier to 95%+ factory purification efficiency at a fraction of the ₹12,000–₹20,000 cost of a new machine. Purifiers with intact bodies and good booster pumps work like brand new after membrane replacement.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">How long does an RO membrane last in Hyderabad?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Membrane lifespan typically ranges between 18 and 36 months in Hyderabad. Longevity depends on your input water TDS (e.g. 400 PPM municipal water vs 2,000 PPM borewell water), daily consumption volume, and crucially, whether pre-filters are replaced every 3 to 6 months to prevent chlorine and silt fouling.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Which membrane capacity (GPD) should I choose?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Standard domestic units use 75 GPD (gallons per day) or 80 GPD membranes for input TDS up to 1,500 PPM. For heavy borewell water above 1,500 PPM or larger families, we install 100 GPD high-rejection membranes paired with an FR 550 flow restrictor.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Do you provide commercial RO membrane replacement?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Yes, we replace 4040 (250 LPH) and 8040 (1,000+ LPH) industrial membranes for commercial RO plants in schools, hospitals, hotels, and apartment complexes across Hyderabad.</p>
+            </div>
+            <div style="border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; background: #ffffff;">
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Why is it recommended to replace pre-filters alongside the membrane?</h3>
+              <p style="color: #475569; margin: 0; font-size: 14px;">Sediment and carbon pre-filters protect the delicate polyamide thin-film composite (TFC) membrane from dirt particles and chlorine. Installing a new membrane behind choked pre-filters drastically shortens its lifespan.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internal Links Section -->
+        <section style="margin-bottom: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
+          <h2 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 14px;">Related Water Purifier Services in Hyderabad:</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="/ro-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO Repair Hyderabad</a>
+            <a href="/ro-filter-replacement-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Filter Replacement</a>
+            <a href="/ro-amc-service" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">RO AMC Plans</a>
+            <a href="/kent-ro-service-repair-hyderabad" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Kent RO Service & Repair</a>
+            <a href="/commercial-ro-plants" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Commercial RO Plants</a>
+            <a href="/products/" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Purifiers Catalog</a>
+            <a href="/contact" style="padding: 8px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 13px; text-decoration: none; font-weight: 600;">Contact & Office Location</a>
+          </div>
+        </section>
+        ${COMMON_FOOTER}
+      </main>
+    `
   }
 };
 
@@ -895,6 +2121,7 @@ Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
 // 2. Populate the 15 Specialized & Brand Service Pages with rich structured content (>500 words each)
 Object.entries(SPECIALIZED_SERVICES_DATA).forEach(([key, srv]) => {
   const routePath = `/${srv.slug}`;
+  if (ROUTE_SEO_CONFIG[routePath]) return;
   let title = `${srv.shortTitle} in Hyderabad | Rainbow Aquafresh`;
   if (title.length > 60) {
     title = `${srv.shortTitle} Hyderabad | Rainbow`;
