@@ -715,9 +715,9 @@ export default function App() {
                     <Award className="w-3.5 h-3.5 text-blue-600" /> 20+ Years Excellence
                   </span>
                   
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-[1.15] mb-3 tracking-tight">
+                  <p className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-[1.15] mb-3 tracking-tight">
                     RO Water Purifier Sales, Installation & Repair in Hyderabad
-                  </h1>
+                  </p>
 
                   <p className="text-slate-500 text-xs sm:text-sm mb-5 leading-relaxed font-normal">
                     Sales • Installation • Repair • AMC • Commercial RO. Beautiful, genuine water solutions with TDS level balancing across Hyderabad!
