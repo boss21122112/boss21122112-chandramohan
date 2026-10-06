@@ -82,7 +82,7 @@ export const AmcPage: React.FC<AmcPageProps> = ({ onOpenBooking }) => {
               365 Days Guaranteed Pure Water Protection
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-              Annual Maintenance Contract (AMC) for RO Purifiers in Hyderabad
+              RO AMC Service in Hyderabad
             </h1>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
               Protect your family's health and your RO investment with Rainbow Aquafresh AMC plans starting at just ₹1,999/year. Includes scheduled quarterly checkups, free genuine filter & membrane replacement, and unlimited zero-charge breakdown repair visits across Greater Hyderabad.

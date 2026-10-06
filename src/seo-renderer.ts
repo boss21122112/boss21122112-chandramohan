@@ -338,10 +338,10 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/ro-amc-service": {
     title: "RO AMC Service in Hyderabad | Rainbow Aquafresh Systems",
-    description: "Comprehensive RO AMC service in Hyderabad from ₹1,999/yr. Includes scheduled visits, free filter & membrane replacement, and zero repair charges. Call +91 8885556965.",
+    description: "RO AMC service in Hyderabad from ₹1,999/yr. Scheduled checkups, free filter & membrane replacement, and zero visiting charges. Call +91 8885556965.",
     keywords: "RO AMC service Hyderabad, RO annual maintenance contract Hyderabad, water purifier AMC Hyderabad, RO maintenance service Hyderabad, domestic RO AMC, commercial RO AMC",
     canonical: "https://www.rainbowafs.com/ro-amc-service",
-    h1: "RO AMC Service & Annual Maintenance Contracts in Hyderabad",
+    h1: "RO AMC Service in Hyderabad",
     schemaJson: JSON.stringify([
       {
         "@context": "https://schema.org",
@@ -485,7 +485,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
         </nav>
 
         <section style="margin-bottom: 40px;">
-          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">RO AMC Service & Annual Maintenance Contracts in Hyderabad</h1>
+          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">RO AMC Service in Hyderabad</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
             Enjoy 365 days of uninterrupted, mineral-balanced, pure drinking water with Rainbow Aquafresh Systems' comprehensive <strong>RO AMC Service in Hyderabad</strong>. Starting at just ₹1,999/year, our annual maintenance plans protect your family from waterborne contaminants and shield your wallet from unexpected repair expenses.
           </p>
@@ -715,12 +715,12 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     description: "Commercial & industrial RO plant makers in Hyderabad. 50 LPH to 2000 LPH skids with SS/FRP build, installation & AMC. Call +91 8885556965.",
     keywords: "Commercial RO Plant Hyderabad, Industrial RO Plant Hyderabad, 500 LPH RO Plant Hyderabad, 1000 LPH RO Plant Price Hyderabad",
     canonical: "https://www.rainbowafs.com/commercial-ro-plants",
-    h1: "Commercial & Industrial RO Plants in Hyderabad",
+    h1: "Commercial RO Plants in Hyderabad",
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
         <section style="margin-bottom: 40px;">
-          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">Commercial & Industrial RO Plants in Hyderabad</h1>
+          <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">Commercial RO Plants in Hyderabad</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
             Rainbow Aquafresh Systems engineers, fabricates, and commissions high-capacity commercial and industrial Reverse Osmosis (RO) plants across Hyderabad and Telangana. Capacities range from 25 LPH, 50 LPH, 250 LPH, 500 LPH, to 2,000 LPH with heavy-duty SS-304 stainless steel or corrosion-resistant FRP skids.
           </p>
@@ -874,7 +874,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/about": {
-    title: "About Rainbow Aquafresh Systems | RO Water Solutions Hyderabad",
+    title: "About Rainbow Aquafresh Systems | Hyderabad RO Experts",
     description: "Learn about Rainbow Aquafresh Systems, Hyderabad's trusted water purification sales, repair & commercial RO specialists since 2004. Call +91 8885556965.",
     keywords: "About Rainbow Aquafresh Systems, RO water purifier company Hyderabad, RO experts Hyderabad, commercial RO plant manufacturers Hyderabad, water purifier service Hyderabad",
     canonical: "https://www.rainbowafs.com/about",
@@ -1330,7 +1330,7 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
   },
   "/kent-ro-service-repair-hyderabad": {
     title: "KENT RO Service & Repair in Hyderabad | Rainbow Aquafresh",
-    description: "Doorstep KENT RO service & repair in Hyderabad. Independent experts for Kent Grand, Prime & Mineral RO. Filter change, UV alarm reset, membrane repair. Call +91 8885556965.",
+    description: "KENT RO service & repair in Hyderabad by independent experts. Filter change, membrane replacement, UV alarm reset & motor repair. Call +91 8885556965.",
     keywords: "KENT RO service Hyderabad, KENT RO repair Hyderabad, KENT water purifier service Hyderabad, KENT RO repair near me, KENT purifier service Hyderabad, KENT filter replacement Hyderabad, KENT membrane replacement Hyderabad",
     canonical: "https://www.rainbowafs.com/kent-ro-service-repair-hyderabad",
     h1: "KENT RO Service & Repair in Hyderabad",
@@ -1698,8 +1698,8 @@ export const ROUTE_SEO_CONFIG: Record<string, RouteSEO> = {
     `
   },
   "/ro-membrane-replacement-service-hyderabad": {
-    title: "RO Membrane Replacement in Hyderabad | Genuine Filmtec 75-100 GPD",
-    description: "Scientific RO membrane replacement in Hyderabad. Genuine 75, 80 & 100 GPD Filmtec & Vontron membranes for high borewell TDS. Digital TDS test & warranty. Call +91 8885556965.",
+    title: "RO Membrane Replacement in Hyderabad | Rainbow Aquafresh",
+    description: "RO membrane replacement in Hyderabad. Genuine 75-100 GPD Filmtec membranes for high TDS borewell water. Digital TDS test & warranty. Call +91 8885556965.",
     keywords: "RO membrane replacement Hyderabad, RO membrane cost Hyderabad, RO membrane price Hyderabad, RO membrane change service, RO high TDS water Hyderabad, RO membrane lifespan, 75 GPD membrane Hyderabad, 100 GPD membrane Hyderabad",
     canonical: "https://www.rainbowafs.com/ro-membrane-replacement-service-hyderabad",
     h1: "RO Membrane Replacement Service in Hyderabad",
@@ -2043,16 +2043,66 @@ Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
     keywords: `RO Service ${loc.name}, Water Purifier Repair ${loc.name}, RO Filter Replacement ${loc.name}, Kent Service ${loc.name}, Aquaguard Service ${loc.name}, RO Repair Hyderabad`,
     canonical: `https://www.rainbowafs.com/${loc.slug}`,
     h1: `RO Water Purifier Service & Repair in ${loc.name}, Hyderabad`,
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rainbowafs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Hyderabad Services", "item": "https://www.rainbowafs.com/ro-service-hyderabad" },
+          { "@type": "ListItem", "position": 3, "name": `RO Service ${loc.name}`, "item": `https://www.rainbowafs.com/${loc.slug}` }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": `Rainbow Aquafresh Systems - ${loc.name}`,
+        "telephone": "+918885556965",
+        "url": `https://www.rainbowafs.com/${loc.slug}`,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "16-10-27/109, 37-2RT, MCH Colony, Malakpet",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": loc.pincode,
+          "addressCountry": "IN"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": `${loc.name}, Hyderabad`
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": loc.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]),
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/ro-service-hyderabad" style="color: #2563eb; text-decoration: none;">Locations</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">${loc.name}</span>
+        </nav>
+
         <section style="margin-bottom: 40px;">
           <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">RO Water Purifier Service & Repair in ${loc.name}, Hyderabad</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
-            Are you experiencing water leakage, slow filtration flow, or unusual water taste from your RO water purifier in <strong>${loc.name}, Hyderabad (PIN: ${loc.pincode})</strong>? Rainbow Aquafresh Systems provides trusted doorstep water purifier repair, genuine filter replacements, and annual maintenance contracts across all residential and commercial addresses in ${loc.name}.
+            Having RO purifier trouble in <strong>${loc.name}, Hyderabad (PIN: ${loc.pincode})</strong>? Whether your machine is leaking, filtering slowly, or producing bad-tasting water, Rainbow Aquafresh Systems is here to help. We provide reliable doorstep repairs, genuine filter changes, and affordable AMC plans across ${loc.name}.
           </p>
           <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
-            Our certified field service engineers are stationed in and around ${loc.name}, ensuring arrival within 60 to 90 minutes with calibrated testing meters and genuine replacement spares for all major brands.
+            Our service engineers are stationed directly around ${loc.name}. We reach your doorstep within 60 to 90 minutes. Every technician carries calibrated digital TDS meters and genuine replacement spares for all top brands.
           </p>
           <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 16px 20px; border-radius: 4px; margin-bottom: 30px;">
             <p style="margin: 0; font-weight: 700; color: #1e40af; font-size: 15px;">
@@ -2069,7 +2119,7 @@ Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
             <p style="margin-bottom: 0;"><strong>Key Landmarks Covered:</strong> ${loc.landmarks.join(', ')}</p>
           </div>
           <p style="color: #475569; margin-bottom: 16px;">
-            Because groundwater in ${loc.name} contains elevated mineral hardness and dissolved solids, conventional gravity or simple UV filters cannot make this water safe. Our high-rejection TFC reverse osmosis membranes safely eliminate heavy metals, fluorides, and excess calcium, reducing TDS to the ideal drinking range of 80 to 120 PPM.
+            Groundwater in ${loc.name} often carries elevated mineral hardness and dissolved solids. Because of this, standard gravity or basic UV purifiers cannot make the water completely safe. Our high-rejection reverse osmosis membranes filter out heavy metals, fluorides, and excess salts. This restores pure water to the healthy drinking range of 80 to 120 PPM.
           </p>
         </section>
 
@@ -2083,11 +2133,13 @@ Object.entries(HYDERABAD_LOCATIONS_DATA).forEach(([key, loc]) => {
         <section style="margin-bottom: 40px;">
           <h2 style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Complete Suite of RO Services in ${loc.name}</h2>
           <ul style="list-style-type: disc; padding-left: 24px; color: #334155; margin-bottom: 20px; line-height: 1.8;">
-            <li><strong>Doorstep Breakdown Repair:</strong> Same-day diagnostics and repair for power failures, leaks, and noisy pumps.</li>
-            <li><strong>Genuine Filter & Membrane Replacement:</strong> Original USA Filmtec 75/80/100 GPD membranes and high-density carbon blocks.</li>
-            <li><strong>New RO Installation & Relocation:</strong> Precision wall mounting and under-sink fitting with 100% food-grade plumbing tubes.</li>
-            <li><strong>Annual Maintenance Contracts (AMC):</strong> Starting at ₹1,999/year with free scheduled filter changes and zero breakdown labor fees.</li>
-            <li><strong>Multi-Brand Servicing:</strong> Expert repair for Kent, Aquaguard, Pureit, Livpure, AO Smith, and Havells systems.</li>
+            <li><strong><a href="/ro-repair-hyderabad" style="color: #2563eb; text-decoration: underline;">Doorstep Breakdown Repair</a>:</strong> Same-day diagnostics and repair for power failures, leaks, and noisy pumps.</li>
+            <li><strong><a href="/ro-filter-replacement-hyderabad" style="color: #2563eb; text-decoration: underline;">Filter & Pre-Filter Replacement</a>:</strong> Original sediment cartridges, spun candles, and high-density carbon blocks.</li>
+            <li><strong><a href="/ro-membrane-replacement-service-hyderabad" style="color: #2563eb; text-decoration: underline;">RO Membrane Replacement</a>:</strong> Genuine 75, 80, and 100 GPD Filmtec & Vontron membranes calibrated for borewell TDS.</li>
+            <li><strong><a href="/ro-installation-hyderabad" style="color: #2563eb; text-decoration: underline;">New RO Installation & Relocation</a>:</strong> Precision wall mounting and under-sink fitting with food-grade plumbing.</li>
+            <li><strong><a href="/ro-amc-service" style="color: #2563eb; text-decoration: underline;">Annual Maintenance Contracts (AMC)</a>:</strong> Starting at ₹1,999/year with free scheduled filter changes and zero breakdown labor fees.</li>
+            <li><strong><a href="/commercial-ro-plants" style="color: #2563eb; text-decoration: underline;">Commercial RO Plants</a>:</strong> Heavy-duty 50 to 2000 LPH systems for apartments, schools, offices, and cafes in ${loc.name}.</li>
+            <li><strong>Multi-Brand Servicing:</strong> Expert independent repair for <a href="/kent-ro-service-repair-hyderabad" style="color: #2563eb; text-decoration: underline;">Kent</a>, <a href="/aquaguard-ro-service-repair-hyderabad" style="color: #2563eb; text-decoration: underline;">Aquaguard</a>, Pureit, Livpure, AO Smith, and Havells systems.</li>
           </ul>
         </section>
 
@@ -2132,16 +2184,63 @@ Object.entries(SPECIALIZED_SERVICES_DATA).forEach(([key, srv]) => {
     keywords: `${srv.shortTitle} Hyderabad, RO Repair Hyderabad, RO Spares Hyderabad, Water Purifier Service Hyderabad`,
     canonical: `https://www.rainbowafs.com/${srv.slug}`,
     h1: srv.title,
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rainbowafs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "RO Services", "item": "https://www.rainbowafs.com/ro-service-hyderabad" },
+          { "@type": "ListItem", "position": 3, "name": srv.shortTitle, "item": `https://www.rainbowafs.com/${srv.slug}` }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": `${srv.title}`,
+        "description": srv.description,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Rainbow Aquafresh Systems",
+          "telephone": "+918885556965",
+          "url": "https://www.rainbowafs.com/"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Hyderabad" },
+          { "@type": "City", "name": "Secunderabad" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": srv.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]),
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/ro-service-hyderabad" style="color: #2563eb; text-decoration: none;">Services</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">${srv.shortTitle}</span>
+        </nav>
+
         <section style="margin-bottom: 40px;">
           <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">${srv.title}</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
             ${srv.description}
           </p>
           <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
-            Rainbow Aquafresh Systems provides specialized, professional ${srv.shortTitle} across all residential, commercial, and institutional establishments in Hyderabad and Secunderabad. Our certified technicians carry genuine, laboratory-tested replacement parts to restore your water purifier to 100% factory performance on the spot.
+            Rainbow Aquafresh Systems provides expert ${srv.shortTitle} across Hyderabad and Secunderabad. We serve both residential and commercial clients. Our certified technicians carry genuine replacement parts, so repairs are completed on the spot with full testing.
           </p>
           <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 24px;">
             <p style="margin-bottom: 8px;"><strong>Estimated Price:</strong> ${srv.pricingRange}</p>
@@ -2192,6 +2291,9 @@ Object.entries(SPECIALIZED_SERVICES_DATA).forEach(([key, srv]) => {
             ${srv.relatedServices.map(rs => `
               <a href="${rs.slug}" style="display: inline-block; padding: 6px 14px; background: #f1f5f9; color: #1e293b; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">${rs.name}</a>
             `).join('')}
+            <a href="/ro-repair-hyderabad" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">RO Repair Hyderabad</a>
+            <a href="/ro-amc-service" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">RO AMC Service</a>
+            <a href="/ro-membrane-replacement-service-hyderabad" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">Membrane Replacement</a>
           </div>
         </section>
         ${COMMON_FOOTER}
@@ -2213,16 +2315,62 @@ Object.entries(COMMERCIAL_PLANTS_DATA).forEach(([key, plant]) => {
     keywords: `${plant.shortTitle} Hyderabad, Commercial RO Hyderabad, Industrial Water Treatment Hyderabad, 500 LPH Plant Price`,
     canonical: `https://www.rainbowafs.com/${plant.slug}`,
     h1: plant.title,
+    schemaJson: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rainbowafs.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Commercial RO Plants", "item": "https://www.rainbowafs.com/commercial-ro-plants" },
+          { "@type": "ListItem", "position": 3, "name": plant.shortTitle, "item": `https://www.rainbowafs.com/${plant.slug}` }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": plant.title,
+        "description": plant.description,
+        "category": "Water Purification Equipment",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "45000",
+          "highPrice": "450000",
+          "offerCount": "8",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": plant.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]),
     contentHtml: `
       ${COMMON_HEADER}
       <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif; line-height: 1.7; color: #1e293b;">
+        <nav aria-label="Breadcrumb" style="font-size: 13px; color: #64748b; margin-bottom: 24px;">
+          <a href="/" style="color: #2563eb; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <a href="/commercial-ro-plants" style="color: #2563eb; text-decoration: none;">Commercial Plants</a>
+          <span style="margin: 0 8px; color: #94a3b8;">/</span>
+          <span style="color: #0f172a; font-weight: 600;">${plant.shortTitle}</span>
+        </nav>
+
         <section style="margin-bottom: 40px;">
           <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 20px; line-height: 1.2;">${plant.title}</h1>
           <p style="font-size: 18px; color: #334155; margin-bottom: 16px;">
             ${plant.description}
           </p>
           <p style="font-size: 16px; color: #475569; margin-bottom: 24px;">
-            Rainbow Aquafresh Systems is one of Telangana's leading manufacturers and engineering contractors for custom commercial Reverse Osmosis systems. We provide complete turnkey project execution—from initial water laboratory audits to CAD engineering, skid fabrication, on-site commissioning, and annual maintenance contracts (AMC).
+            Rainbow Aquafresh Systems manufactures and maintains commercial Reverse Osmosis systems across Telangana. We handle the entire project from start to finish. Our services include water testing, skid fabrication, on-site installation, and comprehensive AMC maintenance.
           </p>
           <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 24px;">
             <p style="margin-bottom: 8px;"><strong>Capacity Range:</strong> ${plant.capacityRange}</p>
@@ -2262,6 +2410,12 @@ Object.entries(COMMERCIAL_PLANTS_DATA).forEach(([key, plant]) => {
           <p style="color: #475569; margin-bottom: 16px;">
             Every commercial plant includes 1 year of comprehensive warranty, routine chemical Cleaning-In-Place (CIP) descaling, media backwashing schedules, and 24-hour breakdown support across Greater Hyderabad.
           </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+            <a href="/commercial-ro-plants" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">All Commercial RO Plants</a>
+            <a href="/commercial-ro-plant-installation-hyderabad" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">Plant Installation Services</a>
+            <a href="/commercial-ro-plant-amc-maintenance-hyderabad" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">Commercial Plant AMC</a>
+            <a href="/industrial-ro-plant-manufacturers-hyderabad" style="display: inline-block; padding: 6px 14px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 14px; text-decoration: none; font-weight: 600;">Industrial RO Plants</a>
+          </div>
         </section>
 
         <section style="margin-bottom: 40px;">
