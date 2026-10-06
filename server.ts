@@ -10,7 +10,7 @@ import { ROUTE_SEO_CONFIG } from "./src/seo-renderer";
 // Safely resolve directory path in both ESM and bundled CJS environments
 const currentDir = typeof __dirname !== "undefined" ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 async function startServer() {
   const app = express();
@@ -299,9 +299,12 @@ async function startServer() {
         template = await vite.transformIndexHtml(req.originalUrl, rawHtml);
       } else {
         const possiblePaths = [
-          path.join(process.cwd(), "dist/index.html"),
+          path.join(process.cwd(), "dist/index.template.html"),
+          path.join(currentDir, "index.template.html"),
+          path.join(currentDir, "../index.template.html"),
           path.join(process.cwd(), "index.html"),
           path.join(currentDir, "index.html"),
+          path.join(process.cwd(), "dist/index.html"),
           path.join(currentDir, "../index.html"),
           path.join(currentDir, "../../index.html")
         ];
@@ -328,7 +331,11 @@ async function startServer() {
         html = html.replace('</head>', `  <script type="application/ld+json">\n${seo.schemaJson}\n  </script>\n</head>`);
       }
 
-      html = html.replace(/<div id="root">.*?<\/div>/s, `<div id="root">${seo.contentHtml}</div>`);
+      if (html.includes('<div id="root"></div>')) {
+        html = html.replace('<div id="root"></div>', `<div id="root">${seo.contentHtml}</div>`);
+      } else {
+        html = html.replace(/<div id="root">[\s\S]*?<\/body>/i, `<div id="root">${seo.contentHtml}</div>\n  </body>`);
+      }
 
       res.status(statusCode).set({
         "Content-Type": "text/html; charset=utf-8",
@@ -351,9 +358,12 @@ async function startServer() {
         template = await vite.transformIndexHtml(req.originalUrl, rawHtml);
       } else {
         const possiblePaths = [
-          path.join(process.cwd(), "dist/index.html"),
+          path.join(process.cwd(), "dist/index.template.html"),
+          path.join(currentDir, "index.template.html"),
+          path.join(currentDir, "../index.template.html"),
           path.join(process.cwd(), "index.html"),
           path.join(currentDir, "index.html"),
+          path.join(process.cwd(), "dist/index.html"),
           path.join(currentDir, "../index.html")
         ];
         const distIndex = possiblePaths.find(p => fs.existsSync(p));
@@ -379,7 +389,11 @@ async function startServer() {
         .replace(/<meta name="description" content=".*?" \/>/s, `<meta name="description" content="The page you requested could not be found. Rainbow Aquafresh Systems provides RO water purifier sales and service in Hyderabad." />`)
         .replace(/<link rel="canonical" href=".*?" \/>/s, `<link rel="canonical" href="https://www.rainbowafs.com/" />`);
 
-      html = html.replace(/<div id="root">.*?<\/div>/s, `<div id="root">${notFoundHtml}</div>`);
+      if (html.includes('<div id="root"></div>')) {
+        html = html.replace('<div id="root"></div>', `<div id="root">${notFoundHtml}</div>`);
+      } else {
+        html = html.replace(/<div id="root">[\s\S]*?<\/body>/i, `<div id="root">${notFoundHtml}</div>\n  </body>`);
+      }
 
       res.status(404).set({
         "Content-Type": "text/html; charset=utf-8",

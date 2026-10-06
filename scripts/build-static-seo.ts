@@ -12,6 +12,9 @@ async function generateStaticPages() {
   }
 
   const baseTemplate = fs.readFileSync(indexHtmlPath, 'utf-8');
+  // Preserve pristine template without SSR injection for server.ts in production
+  fs.writeFileSync(path.join(distDir, 'index.template.html'), baseTemplate, 'utf-8');
+  console.log('  ✓ Created dist/index.template.html');
 
   console.log('Generating pre-rendered static HTML files for all SEO routes...');
 
@@ -80,7 +83,11 @@ async function generateStaticPages() {
     // Inject SSR Crawlable Content into root div
     if (seo.contentHtml) {
       const ssrWrapper = `<div id="root">${seo.contentHtml}</div>`;
-      html = html.replace('<div id="root"></div>', ssrWrapper);
+      if (html.includes('<div id="root"></div>')) {
+        html = html.replace('<div id="root"></div>', ssrWrapper);
+      } else {
+        html = html.replace(/<div id="root">[\s\S]*?<\/body>/i, `${ssrWrapper}\n  </body>`);
+      }
     }
 
     // Determine output file paths for static hosting compatibility
